@@ -1,0 +1,101 @@
+article.node {
+	position: relative;
+	float: left;
+	width: 48%;
+	height: inherit;
+	min-width: 15em;
+	max-width: 24em;
+	min-height: 28.5em;
+	margin: 1.5% 0;
+	padding: 1em 0.5em 0;
+
+	background-color: #fefefe;
+	border:1px solid white;
+
+	border-radius: 2px;
+	box-shadow: 0 1px 3px #bbb;
+
+	&.odd {
+		margin-left: 4%;
+	}
+	header{
+		height: 4.9em;
+	}
+
+	.node-title {
+		margin-bottom: 0.25em;
+		font-size: 1.2em;
+		line-height: 1.1em;
+
+		a, a:visited {
+			color: #444;
+		}
+	}
+
+	.field-name-body{
+		margin-top: 0.5em;
+
+		p {
+			font-size: 0.8em;
+			line-height: 1.8em;
+			color: #444;
+		}
+	}
+
+	.read-more {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		&.teaser {
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+	}
+
+	&.teaser {
+		&:hover {
+			box-shadow: 0 0 15px #5bbcc0;
+			transition: all 0.8s ease-in;
+		}
+
+		.field-name-field-image {
+			img {
+				position: absolute;
+				top: 6em;
+				left: 0;
+				right: 0;
+				border-right: none !important;
+				border-left: none !important;
+
+			}
+		}
+
+		.field-name-body {
+			p {
+				margin-top: 70%;
+			}
+		}
+	}
+}
+
+#main-article {
+	.field-name-field-image {
+		img {
+			margin: 1em 0 0;
+			border: 10px solid #fefefe;
+			@include box-shadow(0, 1px, 3px, #bbb);
+		}
+	}
+
+	.field-name-body {
+		p {
+			margin: 1.5em 0 0;
+			font-size: 0.95em;
+			line-height: 1.8em;
+			color: #333;
+		}
+	}
+}

@@ -1,0 +1,210 @@
+@import 'mixins', 'constants';
+
+@font-face {
+    font-family: 'Georgina';
+    src: url('fonts/CreteRound-Regular-webfont.eot');
+    src: url('fonts/CreteRound-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/CreteRound-Regular-webfont.woff') format('woff'), url('fonts/CreteRound-Regular-webfont.ttf') format('truetype'), url('fonts/CreteRound-Regular-webfont.svg#CreteRoundRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot');
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+	@include reset-box-sizing;
+}
+
+body {
+	line-height: 1;
+	//@include gradient-background(#32b9db, #a8d7db);
+	background: $body_background;
+	background-attachment: fixed;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Georgina', Georgia, serif;
+}
+
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+h3, h4 {
+	font-size: 1.25em;
+}
+h5, h6 {
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+	@include transition;
+}
+
+#container {
+	position: relative;
+	font-family: 'RobotoRegular', Arial, sans-serif;
+	margin: 6em auto 0;
+	max-width: 1280px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#header {
+	background: $body_background;
+	position: fixed;
+	z-index: 5;
+	left: 0;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid #46bdf5;
+}
+#site-name-slogan {
+	display: none;
+}
+#navigation {
+	float: left;
+	width: 13%;
+	max-width: 10em;
+	min-width: 8em;
+}
+
+#nav-spanner{
+	opacity: 0;
+}
+
+#main-menu {
+		position: fixed;
+		left: 0;
+		width: 12%;
+		min-width: 8em;
+		padding: 0 0 1em 0;
+
+	.block-title {
+		display: none;
+		visibility: hidden;
+	}
+
+	.menu {
+		.leaf {
+			position: relative;
+			display: block;
+			margin: 0;
+			padding: 0;
+			height: 7em;
+			list-style: none;
+
+			a {
+				position: relative;
+				display: block;
+				height: 8.8em;
+				margin: 0;
+				padding: 6.8em 1em 0;
+				//background: #f1f1f1;
+				font-size: 0.8em;
+				text-align: center;
+
+				&.active {
+					//background: $main_background;
+				}
+			}
+		}
+	}
+}
+
+#main {
+	position: relative;
+	float: left;
+	width: 60%;
+	min-width: 38em;
+	padding: 1em;
+
+	background: $main_background;
+	@include box-shadow(0, 3px, 10px, #999);
+
+	.submitted {
+		font-size: 0.8em;
+		line-height: 2.2em;
+	}
+
+	.user-picture {
+		float: left;
+
+		img {
+			width: 2.1em;
+			margin-right: 0.25em;
+		}
+	}
+
+	.field-name-field-image {
+		clear: both;
+
+		img {
+			width: 100%;
+			max-width: 580px;
+			border: 1px solid #eee;
+		}
+	}
+}
+@import 'node', 'highlighted', 'slimbox';
+
+#sidebars {
+	position: absolute;
+	left: 75%;
+}
+
+#footer {
+	clear: both;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+.clearfix:after {
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}

@@ -1,0 +1,37 @@
+@mixin transition($aspect: all, $duration: 0.4s, $easing: ease-in) {
+
+    @if ($aspect == "none") {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    } @else {
+        -webkit-transition: $aspect $duration $easing;
+        -moz-transition: $aspect $duration $easing;
+        -o-transition: $aspect $duration $easing;
+        transition: $aspect $duration $easing;
+    }
+}
+
+@mixin reset-box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin gradient-background($top: #ffffff, $bottom: #000000) {
+    background: $bottom;
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}',GradientType=0 );
+}
+
+@mixin box-shadow($x : 0, $y : 0, $distance : 0, $color : #fff) {
+    -moz-box-shadow: $x $y $distance $color;
+   -webkit-box-shadow: $x $y $distance $color;
+   box-shadow: $x $y $distance $color;
+}

@@ -1,0 +1,47 @@
+#highlighted {
+	width: 100%;
+
+
+	article.node {
+		width: 100%;
+		max-width: inherit;
+		margin: 0;
+		padding-bottom: 2.5em;
+	}
+
+	.node-title {
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+
+	.field-name-body{
+		margin-top: 0.5em;
+
+		p {
+			font-size: 0.95em;
+			line-height: 1.6em;
+			color: #333;
+		}
+	}
+
+	.read-more {
+		width: 25%;
+		max-width: 7em;
+		padding: 0.2em 0;
+		color: white;
+		text-align: center;
+		text-shadow: 0 -1px 0 #10b0e2;
+		@include gradient-background(#6edef4, #61bee2);
+		border: 1px solid;
+		border-color: #87f5f0 #34c4d8 #0b9daa;
+		border-radius: 2px;
+		box-shadow: inset 0 1px 1px #fefefe;
+
+		@include transition(none);
+
+		&:hover {
+			background: #61bee2;
+			box-shadow: none;
+		}
+	}
+}
