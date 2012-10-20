@@ -10,7 +10,7 @@
   <header id="header" role="banner" class="clearfix">
 	<?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" id="logo">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        <img src="http://files.thefluffyheads.com/logoness.png" alt="Home" rel="logo" />
       </a>
     <?php endif; ?>
     <?php if ($site_name || $site_slogan): ?>
@@ -28,6 +28,8 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
+
+  <div id="header-shadow" class="empty block">empty space for gutter</div>
 
   <?php if ($main_menu || $secondary_menu || !empty($page['navigation'])): ?>
   <nav id="navigation" role="navigation" class="clearfix">

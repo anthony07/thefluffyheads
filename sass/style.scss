@@ -90,13 +90,29 @@ a {
 }
 
 #header {
-	background: $body_background;
+	background: $header_background;
 	position: fixed;
 	z-index: 5;
 	left: 0;
 	top: 0;
 	width: 100%;
-	border-bottom: 1px solid #46bdf5;
+	border-bottom: 1px solid #acacac;
+}
+#header-shadow {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 3.6em;
+	@include box-shadow(0, 1px, 20px, #242424);
+	border-radius: 30%;
+	z-index: 4;
+	color: transparent;
+}
+#logo {
+	display: block;
+	float: left;
+	margin: 0.3em 1em 0;
 }
 #site-name-slogan {
 	display: none;
