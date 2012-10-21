@@ -1,11 +1,11 @@
 #main{
-    clear: both;
-    float: none;
-    width: 100%;
-    min-width: 0;
+  clear: both;
+  float: none;
+  width: 100%;
+  min-width: 0;
 }
 
 #sidebars {
-    background: green;
-    display: none;
+  background: green;
+  display: none;
 }

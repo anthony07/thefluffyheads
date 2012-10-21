@@ -1,12 +1,12 @@
 #navigation {
-    width: 17%;
+  width: 17%;
 }
 
 #main {
-    width: 83%;
+  width: 83%;
 }
 
 #sidebars {
-    background: pink;
-    display: none;
+  background: pink;
+  display: none;
 }

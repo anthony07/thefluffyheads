@@ -3,7 +3,7 @@
   <?php
     $body = field_get_items('node', $node, 'body');
     $summary = $body[0]['summary'];
-    $exerpt = rtrim(rtrim(substr($summary, 0, 230), '.'));
+    $exerpt = rtrim(rtrim(substr($summary, 0, 190), '.'));
     $title = str_replace("'", "`", $node -> title);
     $read_more = "<a href='{$node_url}' title='{$title}' class='read-more {$view_mode}'>read more
       <span class='element-invisible'>about {$node -> title}</span>
