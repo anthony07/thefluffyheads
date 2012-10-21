@@ -6,7 +6,7 @@ article.node {
 	min-width: 15em;
 	max-width: 24em;
 	min-height: 26em;
-	margin: 1.5% 0;
+	margin: 1.5em 0;
 	padding: 1em 1em 0;
 
 	background-color: #fefefe;
@@ -57,8 +57,11 @@ article.node {
 
 	&.teaser {
 		&:hover {
-			box-shadow: 0 0 15px #5bbcc0;
-			transition: all 0.8s ease-in;
+			margin-top: 1em;
+			margin-bottom: 2em;
+			box-shadow: 0 0.5em 1.3em #555;
+			-webkit-transition: all 0.2s ease-in;
+			-moz-transition: all 0.2s ease-in;
 		}
 
 		.field-name-field-image {
