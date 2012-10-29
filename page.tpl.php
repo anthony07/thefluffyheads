@@ -29,7 +29,8 @@
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
 
-  <div id="header-shadow" class="empty block">empty space for gutter</div>
+  <div id="header_gutter" class="empty"></div>
+  <div id="header-shadow" class="empty block"></div>
 
   <?php if ($main_menu || $secondary_menu || !empty($page['navigation'])): ?>
   <nav id="navigation" role="navigation" class="clearfix">
