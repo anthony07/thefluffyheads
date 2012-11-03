@@ -1,0 +1,21 @@
+#sidebars {
+  position: absolute;
+  top: 4em;
+  left: 75%;
+  margin-right: 0.1em;
+
+  section.block {
+    margin: 0 0 1em;
+    padding: 0 0 0.5em;
+    background: $rough_texture pink;
+    border-radius: 5px;
+    @include box-shadow(0, 1px, 3px, #888);
+  }
+
+  div.content {
+    margin: 1em 1em 0.5em;
+    padding: 0.5em;
+    background: #fefefe;
+    border-radius: 2px;
+  }
+}

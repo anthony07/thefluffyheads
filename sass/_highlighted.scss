@@ -24,7 +24,16 @@
 		}
 	}
 
+	.field-name-field-image {
+		img {
+			border: 10px solid white;
+			@include box-shadow(0, 1px, 3px, #aaa);
+		}
+	}
+
 	.read-more {
+		bottom: 0.5em;
+		right: 0.5em;
 		width: 25%;
 		max-width: 7em;
 		padding: 0.2em 0;

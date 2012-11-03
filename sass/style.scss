@@ -80,7 +80,7 @@ a {
 #container {
 	position: relative;
 	font-family: 'RobotoRegular', Arial, sans-serif;
-	margin: 6em auto 0;
+	margin: 2em auto 0;
 	max-width: 1280px;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -93,7 +93,7 @@ a {
 	left: 0;
 	top: 0;
 	width: 100%;
-	border-bottom: 1px solid #ccc;
+	@include box-shadow(0, 1px, 5px, #a5a5a5);
 }
 
 #header_gutter {
@@ -112,7 +112,7 @@ a {
 	top: 0;
 	width: 100%;
 	height: 3.6em;
-	@include box-shadow(0, 1px, 20px, #242424);
+	@include box-shadow(0, 1px, 20px, #888);
 	border-radius: 30%;
 	z-index: 4;
 	color: transparent;
@@ -153,6 +153,7 @@ a {
 
 #main-menu {
 		position: fixed;
+		top: 5em;
 		left: 0;
 		width: 12%;
 		min-width: 8em;
@@ -196,7 +197,9 @@ a {
 	float: left;
 	width: 60%;
 	min-width: 38em;
-	padding: 1em;
+	padding: 4em 1em 1em;
+	background: $rough_texture #68dbeb;
+	border-radius: 10px;
 
 	&.article-page {
 		background: $main_background;
@@ -227,13 +230,7 @@ a {
 	}
 }
 
-@import 'node', 'highlighted', 'slimbox';
-
-#sidebars {
-	position: absolute;
-	top: 1em;
-	left: 75%;
-}
+@import 'node', 'highlighted', 'slimbox', 'sidebars';
 
 #footer {
 	clear: both;

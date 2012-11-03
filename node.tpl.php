@@ -3,7 +3,8 @@
   <?php
     $body = field_get_items('node', $node, 'body');
     $summary = $body[0]['summary'];
-    $exerpt = rtrim(rtrim(substr($summary, 0, 190), '.'));
+    $exerpt = rtrim(rtrim(substr($summary, 0, 250), '.'));
+    $teaser_exerpt = substr($exerpt, 0, 190);
     $title = str_replace("'", "`", $node -> title);
     $read_more = "<a href='{$node_url}' title='{$title}' class='read-more {$view_mode}'>read more
       <span class='element-invisible'>about {$node -> title}</span>
@@ -45,7 +46,8 @@
   <?php if(!$page): ?>
     <div class="field-name-body" property="content:encoded">
       <p>
-        <?php print $exerpt . "...{$read_more}"; ?>
+        <?php $card_text = !$teaser ? $exerpt : $teaser_exerpt;
+          print $card_text . "...{$read_more}"; ?>
       </p>
     </div>
   <?php else: ?>
