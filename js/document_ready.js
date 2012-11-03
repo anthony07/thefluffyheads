@@ -1,8 +1,5 @@
 jQuery(document).ready(function() {
-  var $ = jQuery;
-  var doc = $(this);
-  var shadow = $('#header-shadow');
-  var main = $('#main');
+  var $ = jQuery, doc = $(this), shadow = $('#header-shadow'), main = $('#main');
 
   $('.white-paper .node:even').addClass('even');
   $('.white-paper .node:odd').addClass('odd');

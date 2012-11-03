@@ -7,13 +7,15 @@
   <head>
     <title>The Fluffy Heads</title>
     <?php print $head; ?>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="http://files.thefluffyheads.com/polyfills/html5shiv.js"></script>
+    <script type="text/javascript" src="http://files.thefluffyheads.com/polyfills/selectivizr.js"></script>
+  <![endif]-->
     <?php print $styles; ?>
     <?php print $scripts; ?>
-    <!--[if (gte IE 7)&(lte  IE 9)]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <meta name="wot-verification" content="67c13bb594c5f2483eaf" />
   </head>
+  <?php flush(); ?>
   <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
     <?php print $page_top; ?>
     <?php print $page; ?>

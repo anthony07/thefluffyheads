@@ -13,8 +13,7 @@ article.node {
 	border:1px solid white;
 
 	border-radius: 5px;
-	box-shadow: 0 1px 5px #777;
-
+	box-shadow: 0 1px 5px #888;
 	&.odd {
 		margin-left: 4%;
 	}
@@ -77,7 +76,7 @@ article.node {
 	.field-name-field-image {
 		img {
 			margin: 1em 0 0;
-			border: 10px solid #fefefe;
+			border: 10px solid #f7f7f7;
 			@include box-shadow(0, 1px, 3px, #bbb);
 		}
 	}

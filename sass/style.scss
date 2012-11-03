@@ -24,12 +24,12 @@ html * {
 	font: inherit;
 	text-rendering: optimizeLegibility;
 	vertical-align: baseline;
+	position: static;
 	@include reset-box-sizing;
 }
 
 body {
 	line-height: 1;
-	//@include gradient-background(#32b9db, #a8d7db);
 	background: $body_background;
 	background-attachment: fixed;
 }
@@ -77,6 +77,10 @@ a {
 	@include transition;
 }
 
+#admin-toolbar * {
+	@include reset-box-sizing(content-box);
+}
+
 #container {
 	position: relative;
 	font-family: 'RobotoRegular', Arial, sans-serif;
@@ -94,6 +98,11 @@ a {
 	top: 0;
 	width: 100%;
 	@include box-shadow(0, 1px, 5px, #a5a5a5);
+
+	.wrapper {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
 }
 
 #header_gutter {
@@ -130,7 +139,7 @@ a {
 
 #block-search-form {
 	float: right;
-	margin: 0.5em 4em 0 0;
+	margin: 0.5em 1em 0 0;
 
 	input[type='text'] {
 		width: 15em;
@@ -152,8 +161,8 @@ a {
 }
 
 #main-menu {
-		position: fixed;
-		top: 5em;
+		position: absolute;
+		top: 3em;
 		left: 0;
 		width: 12%;
 		min-width: 8em;

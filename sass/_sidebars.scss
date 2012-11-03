@@ -1,12 +1,26 @@
 #sidebars {
-  position: absolute;
+  float: right;
+  display: block;
+  position: relative;
   top: 4em;
-  left: 75%;
+  width: 26%;
   margin-right: 0.1em;
 
+  h2.block-title {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    padding: 0 0.75em;
+    line-height: 2;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 1.2em;
+  }
+
   section.block {
+    position: relative;
     margin: 0 0 1em;
-    padding: 0 0 0.5em;
+    padding: 2em 0 0.5em;
     background: $rough_texture pink;
     border-radius: 5px;
     @include box-shadow(0, 1px, 3px, #888);
@@ -17,5 +31,11 @@
     padding: 0.5em;
     background: #fefefe;
     border-radius: 2px;
+  }
+}
+
+#chirping-on-twitter {
+  p.tweet {
+    float: none;
   }
 }
