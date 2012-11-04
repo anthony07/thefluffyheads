@@ -22,7 +22,7 @@
     margin: 0 0 1em;
     padding: 2em 0 0.5em;
     background: $rough_texture pink;
-    border-radius: 5px;
+    @include specific-rounded-corner(0, 0, 5px, 5px);
     @include box-shadow(0, 1px, 3px, #888);
   }
 
