@@ -51,10 +51,8 @@
       </p>
     </div>
   <?php else: ?>
-      <?php
-      print render($content['body']);
-      print $hello; ?>
-    <?php endif;?>
+    <?php print $hello; ?>
+  <?php endif;?>
   </section>
 
 <?php if(!$page): ?>

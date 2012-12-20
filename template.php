@@ -89,7 +89,7 @@ function tfh_preprocess_node(&$variables) {
   $variables['submitted'] = t('Published by !username on !datetime', array('!username' => $variables['name'], '!datetime' => $variables['date']));
   if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
     $variables['classes_array'][] = 'node-full';
-    require_once 'fluffy_node.php';
+    include 'fluffy_node.php';
 
     $variables['hello'] = fluffy_format($variables['content']);
   }
