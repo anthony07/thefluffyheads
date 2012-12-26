@@ -1,3 +1,14 @@
+.sidebar {
+  section.block {
+    position: relative;
+    margin: 0 0 1em;
+    padding: 2em 0 0.5em;
+    background: $rough_texture pink;
+    @include specific-rounded-corner(0, 0, 5px, 5px);
+    @include box-shadow(0, 1px, 3px, #888);
+  }
+}
+
 #sidebars {
   float: right;
   display: block;
@@ -13,17 +24,9 @@
     width: 100%;
     padding: 0 0.75em;
     line-height: 2;
-    background: rgba(255, 255, 255, 0.6);
+    background: white;
     font-size: 1.2em;
-  }
-
-  section.block {
-    position: relative;
-    margin: 0 0 1em;
-    padding: 2em 0 0.5em;
-    background: $rough_texture pink;
-    @include specific-rounded-corner(0, 0, 5px, 5px);
-    @include box-shadow(0, 1px, 3px, #888);
+    @include opaque(0.6);
   }
 
   div.content {
@@ -37,5 +40,50 @@
 #chirping-on-twitter {
   p.tweet {
     float: none;
+  }
+}
+
+#fluffy-tag-cloud {
+  background-color: #d6d6d6;
+
+  a.tagclouds {
+    padding: 0.2em 0.3em;
+    line-height: 1.25;
+
+    &:hover {
+      color: white !important;
+      background: #aaa;
+      @include uniform-rounded-corner(3px);
+    }
+
+    &.level1, &.level1:visited {
+      font-size: 0.9em;
+      color: #15e7f0;
+    }
+
+    &.level2, &.level2:visited{
+      font-size: 0.95em;
+      color: #2798b4;
+    }
+
+    &.level3, &.level3:visited {
+      font-size: 1em;
+      color: #03b7e4;
+    }
+
+    &.level4, &.level4:visited {
+      font-size: 1.1em;
+      color: #0892ff;
+    }
+
+    &.level5, &.level5:visited {
+      font-size: 1.2em;
+      color: #006ec5;
+    }
+
+    &.level6, &.level6:visited {
+      font-size: 1.3em;
+      color: #004f8d;
+    }
   }
 }

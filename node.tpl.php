@@ -10,7 +10,7 @@
       <span class='element-invisible'>about {$node -> title}</span>
       </a>";
   ?>
-  <header>
+  <header class="<?php print 'user-' . $node->uid; ?>">
 <?php else: ?>
 <section id="main-article">
 <?php endif;?>
@@ -25,9 +25,6 @@
       <?php print render($title_suffix);?>
       <?php print $user_picture;?>
       <?php if ($display_submitted):?>
-      <span class="social-links">
-      <?php //print render($content['sharethis']); ?>
-      </span>
       <blockquote class="submitted">
         <?php print "<p class='authored'>{$name} on {$date}</p>" ?>
       </blockquote>
@@ -51,7 +48,7 @@
       </p>
     </div>
   <?php else: ?>
-    <?php print $hello; ?>
+    <?php print render($content); ?>
   <?php endif;?>
   </section>
 

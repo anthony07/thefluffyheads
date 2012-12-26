@@ -7,7 +7,7 @@ article.node {
 	max-width: 24em;
 	min-height: 26em;
 	margin: 1.5em 0;
-	padding: 1em 1em 0;
+	padding: 0;
 
 	background-color: #fefefe;
 	border:1px solid white;
@@ -18,7 +18,7 @@ article.node {
 		margin-left: 4%;
 	}
 	header{
-		height: 4.9em;
+		padding: 0.8em 3.8em 0.5em 0.8em;
 	}
 
 	.node-title {
@@ -31,10 +31,40 @@ article.node {
 		}
 	}
 
+	.user-picture {
+		position: absolute;
+		top: -0.3em;
+		right: 0.3em;
+		padding: 1em 0.2em;
+		border: 3px solid;
+		@include specific-rounded-corner(0, 0, 35%, 35%);
+		box-shadow: 0 1px 3px #494949;
+	}
+	//random rae
+	.user-4 .user-picture {
+		background: #ffc8e2;
+		border-color: #f4c9f8 #f5a1d7 #f789c6;
+	}
+	//techie tony
+	.user-5 .user-picture {
+		background: #c4e8f1;
+		border-color: #bdeaf3 #92d2db #5bd0f5;
+	}
+	//nerdy nathan
+	.user-48 .user-picture {
+		background: #c7f8a7;
+		border-color: #ddf3bd #98df9b #6add6a;
+	}
+
+	.submitted {
+		color: #999;
+	}
+
 	.field-name-body{
 		margin-top: 0.5em;
 
 		p {
+			padding: 0 1em;
 			font-size: 0.8em;
 			line-height: 1.8em;
 			color: #444;
@@ -66,7 +96,6 @@ article.node {
 		.field-name-field-image {
 			img {
 				position: relative;
-				border: 1px solid #e0e0e0;
 			}
 		}
 	}
