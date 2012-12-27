@@ -4,7 +4,7 @@
     margin: 0 0 1em;
     padding: 2em 0 0.5em;
     background: $rough_texture pink;
-    @include specific-rounded-corner(0, 0, 5px, 5px);
+    @include specific-rounded-corner(0, 0, 10px, 10px);
     @include box-shadow(0, 1px, 3px, #888);
   }
 }
@@ -31,20 +31,58 @@
 
   div.content {
     margin: 1em 1em 0.5em;
-    padding: 0.5em;
+    padding: 0;
     background: #fefefe;
     border-radius: 2px;
   }
 }
 
 #chirping-on-twitter {
+  background-color: #72e4cd;
+
+  li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: #eafffa;
+  }
+
+  .twitter_block_user {
+    width: 100%;
+    padding: 1em 0.8em 0.5em;
+    border-top: 1px solid white;
+
+    img {
+      width: 2em;
+      vertical-align: middle;
+      @include uniform-rounded-corner;
+    }
+  }
+
+  .twitter_block_user_name {
+    font-size: 0.8em;
+    color: #67B8A8;
+  }
+
   p.tweet {
-    float: none;
+  padding: 0 1em 1.5em;
+  border-bottom: 1px solid #ceeee7;
+  font-size: 0.8em;
+  color: #444;
+  line-height: 1.6;
+
+    a {
+      color: #1ea081;
+    }
   }
 }
 
 #fluffy-tag-cloud {
   background-color: #d6d6d6;
+
+  div.content {
+    padding: 0.5em;
+  }
 
   a.tagclouds {
     padding: 0.2em 0.3em;

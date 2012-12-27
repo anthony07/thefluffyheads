@@ -336,7 +336,8 @@ article.node {
     top: -0.3em;
     right: 0.3em;
     padding: 1em 0.2em;
-    border: 3px solid;
+    border-style: solid;
+    border-width: 2px 3px 3px;
     -webkit-border-top-left-radius: 0;
     -webkit-border-top-right-radius: 0;
     -webkit-border-bottom-right-radius: 35%;
@@ -410,7 +411,8 @@ article.node {
     font-size: 1.5em;
     line-height: 1.5em; }
   #highlighted .user-picture {
-    padding: 1.5em 0.3em; }
+    padding: 1.5em 0.3em;
+    border-width: 3px 4px 4px; }
     #highlighted .user-picture img {
       width: 3em; }
   #highlighted .field-name-body {
@@ -421,7 +423,7 @@ article.node {
       line-height: 1.6em;
       color: #333; }
   #highlighted .field-name-field-image {
-    margin-left: 1em; }
+    margin-left: 0.8em; }
     #highlighted .field-name-field-image img {
       border: 10px solid #f7f7f7;
       -moz-box-shadow: 0 1px 3px #aaaaaa;
@@ -537,16 +539,16 @@ article.node {
   background: url(http://files.thefluffyheads.com/assets/rough-texture-the-fluffy-heads.png) repeat 0 0 pink;
   -webkit-border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
   -moz-border-radius-topleft: 0;
   -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   -moz-box-shadow: 0 1px 3px #888888;
   -ms-box-shadow: 0 1px 3px #888888;
   -webkit-box-shadow: 0 1px 3px #888888;
@@ -571,15 +573,43 @@ article.node {
     opacity: 0.6; }
   #sidebars div.content {
     margin: 1em 1em 0.5em;
-    padding: 0.5em;
+    padding: 0;
     background: #fefefe;
     border-radius: 2px; }
 
-#chirping-on-twitter p.tweet {
-  float: none; }
+#chirping-on-twitter {
+  background-color: #72e4cd; }
+  #chirping-on-twitter li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: #eafffa; }
+  #chirping-on-twitter .twitter_block_user {
+    width: 100%;
+    padding: 1em 0.8em 0.5em;
+    border-top: 1px solid white; }
+    #chirping-on-twitter .twitter_block_user img {
+      width: 2em;
+      vertical-align: middle;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+  #chirping-on-twitter .twitter_block_user_name {
+    font-size: 0.8em;
+    color: #67B8A8; }
+  #chirping-on-twitter p.tweet {
+    padding: 0 1em 1.5em;
+    border-bottom: 1px solid #ceeee7;
+    font-size: 0.8em;
+    color: #444;
+    line-height: 1.6; }
+    #chirping-on-twitter p.tweet a {
+      color: #1ea081; }
 
 #fluffy-tag-cloud {
   background-color: #d6d6d6; }
+  #fluffy-tag-cloud div.content {
+    padding: 0.5em; }
   #fluffy-tag-cloud a.tagclouds {
     padding: 0.2em 0.3em;
     line-height: 1.25; }

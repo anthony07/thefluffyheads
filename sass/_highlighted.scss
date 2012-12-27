@@ -16,6 +16,7 @@
 
 	.user-picture {
 		padding: 1.5em 0.3em;
+		border-width: 3px 4px 4px;
 
 		img{
 			width: 3em;
@@ -35,7 +36,7 @@
 	}
 
 	.field-name-field-image {
-		margin-left: 1em;
+		margin-left: 0.8em;
 
 		img {
 			border: 10px solid #f7f7f7;
