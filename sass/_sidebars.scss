@@ -17,6 +17,15 @@
   width: 26%;
   margin-right: 0.1em;
 
+  .block-icon {
+    height: 1.8em;
+    width: 1.5em;
+    display: block;
+    float: left;
+    margin-right: 0.3em;
+    background: $images;
+  }
+
   h2.block-title {
     position: absolute;
     display: block;
@@ -37,6 +46,43 @@
   }
 }
 
+#our-fluffy-aim {
+  p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #444;
+
+    &:first-letter {
+      font-family: 'Georgina', Georgia, serif;
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+  }
+
+  div.content {
+    padding: 0.8em;
+    background-color: #ffeaf5;
+  }
+
+  .block-icon {
+    width: 2.7em;
+    background-position: -4em 0;
+  }
+}
+
+#recent-comments {
+  background-color: #ffbaad;
+
+  li {
+    margin: 0;
+    padding: 0.8em;
+  }
+
+  .block-icon {
+    background-position: -2.9em -2.6em;
+  }
+}
+
 #chirping-on-twitter {
   background-color: #72e4cd;
 
@@ -45,12 +91,18 @@
     padding: 0;
     margin: 0;
     background: #eafffa;
+    border-top: 1px solid white;
+    border-bottom: 1px solid #ceeee7;
+  }
+
+  .block-icon {
+    background-position: 0 -2.6em;
   }
 
   .twitter_block_user {
     width: 100%;
-    padding: 1em 0.8em 0.5em;
-    border-top: 1px solid white;
+    padding: 0.5em 0.8em 1em;
+
 
     img {
       width: 2em;
@@ -59,14 +111,20 @@
     }
   }
 
-  .twitter_block_user_name {
+  .tweet-author {
     font-size: 0.8em;
-    color: #67B8A8;
+    color: #67b8a8;
+  }
+
+  .tweet-posted {
+    font-size: 0.7em;
+    line-height: 2.5;
+    color: #8FCEBF;
+    padding-left: 1em;
   }
 
   p.tweet {
-  padding: 0 1em 1.5em;
-  border-bottom: 1px solid #ceeee7;
+  padding: 1em 1em 0;
   font-size: 0.8em;
   color: #444;
   line-height: 1.6;
@@ -77,11 +135,26 @@
   }
 }
 
+#fluffy-polls {
+  .block-icon {
+    background-position: -9.1em -2.6em;
+  }
+
+  div.content {
+    padding: 0.8em;
+  }
+}
+
 #fluffy-tag-cloud {
   background-color: #d6d6d6;
 
+  .block-icon {
+    background-position: -1.4em -2.6em;
+  }
+
   div.content {
-    padding: 0.5em;
+    padding: 0.5em 0 0.5em 0.5em;
+    background: #f9f9f9;
   }
 
   a.tagclouds {

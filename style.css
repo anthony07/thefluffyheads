@@ -71,6 +71,9 @@ a {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in; }
 
+.hidden {
+  display: none; }
+
 #admin-toolbar * {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -133,6 +136,7 @@ a {
   display: none; }
 
 #block-search-form {
+  position: relative;
   float: right;
   margin: 0.8em 0 0 0; }
   #block-search-form input[type='text'] {
@@ -146,9 +150,16 @@ a {
     border-radius: 3px;
     line-height: 1.4em; }
   #block-search-form input[type='submit'] {
-    height: 0;
-    width: 0;
-    display: none; }
+    background: url(http://files.thefluffyheads.com/assets/fluffy-sprite.png) no-repeat 0 0 transparent;
+    background-position: -7.2em -3.4em;
+    position: absolute;
+    top: 0;
+    right: 0.5em;
+    height: 100%;
+    width: 2em;
+    text-indent: 999em;
+    opacity: 0.3;
+    cursor: pointer; }
 
 #navigation {
   float: left;
@@ -182,7 +193,7 @@ a {
       height: 5em;
       margin: 0;
       padding: 5.8em 1em 0;
-      background: url(http://files.thefluffyheads.com/assets/image-sprite-thefluffyheads.png) no-repeat 0 0 transparent;
+      background: url(http://files.thefluffyheads.com/assets/fluffy-sprite.png) no-repeat 0 0 transparent;
       background-position: 4em -2em;
       font: 0.7em/1em "Georgina", Georgia, serif;
       text-align: center; }
@@ -193,8 +204,8 @@ a {
   width: 60%;
   min-width: 38em;
   padding: 4em 1em 1em;
-  background: url(http://files.thefluffyheads.com/assets/rough-texture-the-fluffy-heads.png) repeat 0 0 #68dbeb;
-  border: 1px solid #3ec3c9;
+  background: url(http://files.thefluffyheads.com/assets/rough-texture-the-fluffy-heads.png) repeat 0 0 #8acee4;
+  border: 1px solid #79b9be;
   border-radius: 10px; }
   #main.article-page {
     background: url(http://files.thefluffyheads.com/assets/paper-thefluffyheads.jpg) repeat 0 0 #f7f7e2;
@@ -561,6 +572,13 @@ article.node {
   top: 4em;
   width: 26%;
   margin-right: 0.1em; }
+  #sidebars .block-icon {
+    height: 1.8em;
+    width: 1.5em;
+    display: block;
+    float: left;
+    margin-right: 0.3em;
+    background: url(http://files.thefluffyheads.com/assets/fluffy-sprite.png) no-repeat 0 0 transparent; }
   #sidebars h2.block-title {
     position: absolute;
     display: block;
@@ -577,39 +595,77 @@ article.node {
     background: #fefefe;
     border-radius: 2px; }
 
+#our-fluffy-aim p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #444; }
+  #our-fluffy-aim p:first-letter {
+    font-family: 'Georgina', Georgia, serif;
+    font-size: 1.6em;
+    font-weight: bold; }
+#our-fluffy-aim div.content {
+  padding: 0.8em;
+  background-color: #ffeaf5; }
+#our-fluffy-aim .block-icon {
+  width: 2.7em;
+  background-position: -4em 0; }
+
+#recent-comments {
+  background-color: #ffbaad; }
+  #recent-comments li {
+    margin: 0;
+    padding: 0.8em; }
+  #recent-comments .block-icon {
+    background-position: -2.9em -2.6em; }
+
 #chirping-on-twitter {
   background-color: #72e4cd; }
   #chirping-on-twitter li {
     position: relative;
     padding: 0;
     margin: 0;
-    background: #eafffa; }
+    background: #eafffa;
+    border-top: 1px solid white;
+    border-bottom: 1px solid #ceeee7; }
+  #chirping-on-twitter .block-icon {
+    background-position: 0 -2.6em; }
   #chirping-on-twitter .twitter_block_user {
     width: 100%;
-    padding: 1em 0.8em 0.5em;
-    border-top: 1px solid white; }
+    padding: 0.5em 0.8em 1em; }
     #chirping-on-twitter .twitter_block_user img {
       width: 2em;
       vertical-align: middle;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-  #chirping-on-twitter .twitter_block_user_name {
+  #chirping-on-twitter .tweet-author {
     font-size: 0.8em;
-    color: #67B8A8; }
+    color: #67b8a8; }
+  #chirping-on-twitter .tweet-posted {
+    font-size: 0.7em;
+    line-height: 2.5;
+    color: #8FCEBF;
+    padding-left: 1em; }
   #chirping-on-twitter p.tweet {
-    padding: 0 1em 1.5em;
-    border-bottom: 1px solid #ceeee7;
+    padding: 1em 1em 0;
     font-size: 0.8em;
     color: #444;
     line-height: 1.6; }
     #chirping-on-twitter p.tweet a {
       color: #1ea081; }
 
+#fluffy-polls .block-icon {
+  background-position: -9.1em -2.6em; }
+#fluffy-polls div.content {
+  padding: 0.8em; }
+
 #fluffy-tag-cloud {
   background-color: #d6d6d6; }
+  #fluffy-tag-cloud .block-icon {
+    background-position: -1.4em -2.6em; }
   #fluffy-tag-cloud div.content {
-    padding: 0.5em; }
+    padding: 0.5em 0 0.5em 0.5em;
+    background: #f9f9f9; }
   #fluffy-tag-cloud a.tagclouds {
     padding: 0.2em 0.3em;
     line-height: 1.25; }

@@ -77,6 +77,10 @@ a {
 	@include transition;
 }
 
+.hidden {
+	display: none;
+}
+
 #admin-toolbar * {
 	@include reset-box-sizing(content-box);
 }
@@ -138,6 +142,7 @@ a {
 }
 
 #block-search-form {
+	position: relative;
 	float: right;
 	margin: 0.8em 0 0 0;
 
@@ -152,9 +157,16 @@ a {
 	}
 
 	input[type='submit'] {
-		height: 0;
-		width: 0;
-		display: none;
+		background: $images;
+		background-position: -7.2em -3.4em;
+		position: absolute;
+		top: 0;
+		right: 0.5em;
+		height: 100%;
+		width: 2em;
+		text-indent: 999em;
+		opacity: 0.3;
+		cursor: pointer;
 	}
 }
 
@@ -216,8 +228,8 @@ a {
 	width: 60%;
 	min-width: 38em;
 	padding: 4em 1em 1em;
-	background: $rough_texture #68dbeb;
-	border: 1px solid #3ec3c9;
+	background: $rough_texture #8acee4;
+	border: 1px solid #79b9be;
 	border-radius: 10px;
 
 	&.article-page {
