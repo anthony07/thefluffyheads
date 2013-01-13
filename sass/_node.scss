@@ -33,28 +33,29 @@ article.node {
 
 	.user-picture {
 		position: absolute;
-		top: -0.3em;
-		right: 0.3em;
-		padding: 1em 0.2em;
-		border-style: solid;
-		border-width: 2px 3px 3px;
-		@include specific-rounded-corner(0, 0, 35%, 35%);
+		top: -0.2em;
+		right: -0.15em;
+		padding: 0.5em 0.1em 0.5em 0.3em;
+		border: 2px solid;
+		border-top: none;
+		border-right: none;
+		@include specific-rounded-corner(0, 5px, 35%, 0);
 		box-shadow: 0 1px 3px #494949;
 	}
 	//random rae
 	.user-4 .user-picture {
 		background: #ffc8e2;
-		border-color: #f4c9f8 #f5a1d7 #f789c6;
+		border-color: #f5a1d7;
 	}
 	//techie tony
 	.user-5 .user-picture {
 		background: #c4e8f1;
-		border-color: #bdeaf3 #92d2db #5bd0f5;
+		border-color: #92d2db;
 	}
 	//nerdy nathan
 	.user-48 .user-picture {
 		background: #c7f8a7;
-		border-color: #ddf3bd #98df9b #6add6a;
+		border-color: #98df9b;
 	}
 
 	.submitted {

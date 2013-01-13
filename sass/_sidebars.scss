@@ -18,11 +18,11 @@
   margin-right: 0.1em;
 
   .block-icon {
-    height: 1.8em;
-    width: 1.5em;
+    height: 35px;
+    width: 35px;
     display: block;
     float: left;
-    margin-right: 0.3em;
+    margin-right: 0.5em;
     background: $images;
   }
 
@@ -33,9 +33,9 @@
     width: 100%;
     padding: 0 0.75em;
     line-height: 2;
-    background: white;
     font-size: 1.2em;
-    @include opaque(0.6);
+    color: white;
+    @include opaque(0.7);
   }
 
   div.content {
@@ -43,43 +43,6 @@
     padding: 0;
     background: #fefefe;
     border-radius: 2px;
-  }
-}
-
-#our-fluffy-aim {
-  p {
-    font-size: 0.9em;
-    line-height: 1.5;
-    color: #444;
-
-    &:first-letter {
-      font-family: 'Georgina', Georgia, serif;
-      font-size: 1.6em;
-      font-weight: bold;
-    }
-  }
-
-  div.content {
-    padding: 0.8em;
-    background-color: #ffeaf5;
-  }
-
-  .block-icon {
-    width: 2.7em;
-    background-position: -4em 0;
-  }
-}
-
-#recent-comments {
-  background-color: #ffbaad;
-
-  li {
-    margin: 0;
-    padding: 0.8em;
-  }
-
-  .block-icon {
-    background-position: -2.9em -2.6em;
   }
 }
 
@@ -95,8 +58,13 @@
     border-bottom: 1px solid #ceeee7;
   }
 
+  h2.block-title {
+    text-shadow: 0 0 2px #418d87;
+    background-color: #60c2ba;
+  }
+
   .block-icon {
-    background-position: 0 -2.6em;
+    background-position: 0 -48px;
   }
 
   .twitter_block_user {
@@ -119,7 +87,7 @@
   .tweet-posted {
     font-size: 0.7em;
     line-height: 2.5;
-    color: #8FCEBF;
+    color: #8fcebf;
     padding-left: 1em;
   }
 
@@ -136,20 +104,53 @@
 }
 
 #fluffy-polls {
+  h2.block-title {
+    background-color: #f584ac;
+    text-shadow: 0 0 2px #a85867;
+  }
+
   .block-icon {
-    background-position: -9.1em -2.6em;
+    background-position: -118px -50px;
+  }
+
+  .title {
+    font: normal 1.2em/1.1'Georgina', Georgia, serif;
+    color: #a86083;
+    margin-bottom: 1em;
+
+    &:first-letter{
+      text-transform: capitalize;
+    }
+  }
+
+  .text {
+    font-size: 0.9em;
+    color: #be7099;
+  }
+
+  .foreground {
+    background-color: #f35688;
+  }
+
+  .bar {
+    background-color: #ffe4f2;
   }
 
   div.content {
-    padding: 0.8em;
+    padding: 1em 0.8em;
   }
 }
 
 #fluffy-tag-cloud {
-  background-color: #d6d6d6;
+  background-color: #6ecfee;
+
+  h2.block-title {
+    background-color: #55b0ce;
+    text-shadow: 0 0 2px #108a9b;
+  }
 
   .block-icon {
-    background-position: -1.4em -2.6em;
+    background-position: -38px -50px;
   }
 
   div.content {

@@ -88,10 +88,19 @@ a {
 #container {
 	position: relative;
 	font-family: 'RobotoRegular', Arial, sans-serif;
-	margin: 2em auto 0;
-	max-width: 1280px;
+	margin: 2em auto 25em;
+	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	background: $background;
+	box-shadow: 0 0.2em 0.5em #7a7a7a;
+	z-index: 1;
+}
+
+#wrapper {
+	position: relative;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 #header {
@@ -107,16 +116,6 @@ a {
 		margin: 0 auto;
 		max-width: 1280px;
 	}
-}
-
-#header_gutter {
-	position: fixed;
-	top: 2em;
-	left: 0;
-	width: 100%;
-	height: 4.5em;
-	background: $header_gutter_background;
-	z-index: 0;
 }
 
 #header-shadow {
@@ -158,11 +157,11 @@ a {
 
 	input[type='submit'] {
 		background: $images;
-		background-position: -7.2em -3.4em;
+		background-position: 12px -83px;
 		position: absolute;
-		top: 0;
+		top: 7px;
 		right: 0.5em;
-		height: 100%;
+		height: 20px;
 		width: 2em;
 		text-indent: 999em;
 		opacity: 0.3;
@@ -225,16 +224,16 @@ a {
 #main {
 	position: relative;
 	float: left;
+	margin: 0;
 	width: 60%;
 	min-width: 38em;
 	padding: 4em 1em 1em;
-	background: $rough_texture #8acee4;
-	border: 1px solid #79b9be;
-	border-radius: 10px;
+	background: $rough_texture #e1e1e1;
+	border: 1px solid #d8d8d8;
 
 	&.article-page {
-		background: $main_background;
-		@include box-shadow(0, 3px, 10px, #999);
+		background: #fefefe;
+		padding: 4em 2em;
 	}
 	.submitted {
 		font-size: 0.8em;
@@ -333,7 +332,58 @@ a {
 @import 'node', 'highlighted', 'slimbox', 'sidebars';
 
 #footer {
-	clear: both;
+	position: fixed;
+	bottom: 0;
+	margin: 0 auto;
+	max-width: 1024px;
+	height: 25em;
+	width: 100%;
+}
+
+#footer-art {
+	position: absolute;
+	bottom: -0.2em;
+
+	a, a:visited {
+		display: block;
+		position: absolute;
+		background: $footer_avatars;
+		text-indent: -999em;
+	}
+
+	.about-us {
+		height: 290px;
+		width: 225px;
+		top: -130px;
+		left: 720px;
+		@include transition(all, 0.4s, ease-out);
+
+		&:hover{
+			left: 740px;
+		}
+	}
+
+	.site-map {
+		height: 110px;
+		width: 110px;
+		top: 0;
+		left: 165px;
+		background-position: -240px -179px;
+	}
+
+	.back-to-top {
+		height: 150px;
+		width: 127px;
+		top: -60px;
+		left: 460px;
+		background-position: -225px 0;
+		@include transition(all, 0.2s, ease-out);
+
+		&:hover {
+			top: -90px;
+			left: 490px;
+		}
+	}
 }
 
 
