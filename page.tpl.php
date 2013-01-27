@@ -67,7 +67,7 @@
       <div id="nav-spanner">End of navigation</div>
     </nav> <!-- /#navigation -->
     <?php endif; ?>
-    <section id="main" role="main" class="<?php ($is_front) ? print 'front-page' : print 'article-page'; ?>">
+    <section id="main" role="main" class="<?php ($is_front || arg(0) == 'taxonomy') ? print 'front-page' : print 'article-page'; ?>">
       <?php print $messages; ?>
     <?php if ($page['highlighted']): ?>
       <div id="highlighted" class="clearfix"><?php print render($page['highlighted']); ?></div>

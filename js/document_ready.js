@@ -9,8 +9,8 @@ jQuery(document).ready(function() {
   //This for the Pager to have room for margin
   $('article.node:last-of-type').addClass('clearfix');
 
-  //Adjust footer contents in load and resize
-  var adjustFooter = function() {
+  //Adjust menu and footer contents in load and resize
+  var adjust = function() {
     var width = wind0w.width(), footerBase = $('#footer-base');
     if(width < 1024) {
       footer.css("left", 0);
@@ -20,8 +20,8 @@ jQuery(document).ready(function() {
     }
   }
 
-  adjustFooter();
-  wind0w.resize(adjustFooter);
+  adjust();
+  wind0w.resize(adjust);
 
   //Show shadow under header when #main is under
   //Sticky navigation
@@ -31,7 +31,8 @@ jQuery(document).ready(function() {
     if(scrolled > 50) shadow.show('fast');
     else shadow.hide('slow');
 
-    if(scrolled < (main.outerHeight() - 400))
+
+    if(scrolled < (main.outerHeight() - 600))
       menu.animate({"margin-top": scrolled}, 100);
   });
 });

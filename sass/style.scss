@@ -204,7 +204,7 @@ a {
 	top: 3em;
 	left: 1em;
 	width: 10%;
-	min-width: 7em;
+	min-width: 142px;
 	padding: 0 0 1em 0;
 
 	.block-title {
@@ -214,9 +214,6 @@ a {
 
 	.menu {
 		margin: 1em 0 0;
-		border: 1px solid #e2e2e2;
-		border-top: none;
-		border-bottom: none;
 		box-shadow: 0 1px 3px #eee;
 
 		.leaf {
@@ -227,21 +224,24 @@ a {
 			height: 6em;
 			list-style: none;
 			background: $rough_texture #fefefe;
-			border-bottom: 1px solid #ddd;
+			border-bottom: 1px solid #e2e2e2;
 			border-top: 1px solid #fefefe;
+			border-left: 1px solid #e2e2e2;
 			@include transition(all, 0.2s, ease-in);
 			@include opaque(0.7);
 
 			&:hover, &.active-trail {
-				padding: 1.5em 0;
-				height: 7em;
 				@include opaque(1);
 			}
 
 			&.active-trail {
-				width: 9em;
+				padding: 1.5em 0;
+				height: 7em;
+				width: 10.1em;
+				margin-left: -1em;
 				background: $article;
 				z-index: 10;
+				box-shadow: -1px 1px 1px #eee;
 			}
 
 			a {
@@ -254,25 +254,27 @@ a {
 				background: $images;
 				background-position: -61px 0;
 				font: 0.8em/1em "Georgina", serif;
-				color: #8bbbd1;
+				color: #bcc22a;
 				text-align: center;
 				line-height: 2em;
 				white-space: nowrap;
-
-				&.active {
-					//background: $main_background;
-				}
 			}
 		}
 
-		.first.leaf {
+		.leaf.techie-tony {
+			a {
+				color: #8bbbd1;
+			}
+		}
+
+		.leaf.nerdy-nathan {
 			a {
 				background-position: -131px 0;
 				color: #92d192;
 			}
 		}
 
-		.last.leaf {
+		.leaf.random-rae {
 			a {
 				background-position: 8px 0;
 				color: #e6a0be;
@@ -292,13 +294,10 @@ a {
 	border: 1px solid #e7e7e7;
 
 	&.article-page {
-		background: $article;
-		padding: 4em 1em;
-
-		&.story {
-			padding: 4em 2em;
-		}
+		background: #fefefe;
+		padding: 4em 2em;
 	}
+
 	.submitted {
 		font-size: 0.8em;
 		line-height: 2.2em;

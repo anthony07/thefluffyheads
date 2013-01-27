@@ -153,3 +153,14 @@ function tfh_form_alter(&$form, &$form_state, $form_id) {
     $form['search_block_form']['#attributes']['placeholder'] = "Fluffy Search";
   }
 }
+
+/**
+* theme_menu_link()
+*/
+function tfh_menu_link(&$variables) {
+  $link = str_replace(" ", "-", $variables['element']['#original_link']['link_title']);
+  $link_title = strtolower($link);
+  $variables['element']['#attributes']['class'][] = $link_title;
+  if(drupal_is_front_page() && $link_title == 'home') $variables['element']['#attributes']['class'][] = "active-trail";
+  return theme_menu_link($variables);
+}
