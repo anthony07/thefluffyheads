@@ -11,7 +11,7 @@
       <div class="wrapper">
     	<?php if ($logo): ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" id="logo">
-            <img src="http://files.thefluffyheads.com/logoness.png" alt="Home" rel="logo" />
+            <h1 id="site-title" role="banner">The Fluffy Heads</h1>
           </a>
         <?php endif; ?>
         <?php if ($site_name || $site_slogan): ?>
@@ -103,7 +103,7 @@
   <div id="footer-art">
     <a class="about-us" title="Abous Us" href="/about-us">About Us</a>
     <a class="site-map" title="Site Map" href="/site-map">Site Map</a>
-    <a class="back-to-top" title="Back to Top" href="#">Back to Top</a>
+    <a class="write-to-us" title="Write to Us" href="/contact">Write to Us</a>
     <img id="footer-base" src="http://files.thefluffyheads.com/assets/sprites/base.png" alt="footer-base.png" />
   </div>
 </footer> <!-- /#footer -->

@@ -2,7 +2,7 @@
   opacity: $value;
 }
 
-@mixin transition($aspect: all, $duration: 0.4s, $easing: ease-in) {
+@mixin transition($aspect: all, $duration: 0.3s, $easing: ease-in) {
   @if ($aspect == "none") {
     -webkit-transition: none;
     -moz-transition: none;

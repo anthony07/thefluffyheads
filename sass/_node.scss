@@ -1,3 +1,39 @@
+.field-name-field-tags {
+	margin: 2em 0 1em;
+
+	a {
+		display: inline-block;
+		margin-right: 0.3em;
+		padding: 0 1em;
+		background: rgb(24, 189, 213);
+		border-radius: 3px;
+		font-size: 0.9em;
+		line-height: 1.9;
+		color: white;
+
+		&:hover {
+			text-shadow: 0 -1px 0 #777;
+			background-color: #888;
+		}
+	}
+
+	.field-label {
+		display: block;
+		float: left;
+		width: 40px;
+		height: 34px;
+		margin-right: 1em;
+		text-indent: -9999px;
+		background: $images;
+		background-position: -241px -65px;
+	}
+
+	.field-item {
+		float: left;
+		margin-top: 0.2em;
+	}
+}
+
 article.node {
 	position: relative;
 	float: left;
@@ -13,7 +49,8 @@ article.node {
 	border:1px solid white;
 
 	border-radius: 5px;
-	box-shadow: 0 1px 5px #888;
+	box-shadow: 0 1px 4px #999;
+
 	&.odd {
 		margin-left: 4%;
 	}
@@ -90,7 +127,7 @@ article.node {
 		&:hover {
 			margin-top: 1em;
 			margin-bottom: 2em;
-			box-shadow: 0 0.5em 1.3em #555;
+			box-shadow: 0 0.3em 1em #666;
 			-webkit-transition: all 0.2s ease-in;
 			-moz-transition: all 0.2s ease-in;
 		}
@@ -101,6 +138,12 @@ article.node {
 			}
 		}
 	}
+}
+
+#page-title {
+	color: #555;
+	font-size: 1.8em;
+	margin-bottom: 0.3em;
 }
 
 #main-article {

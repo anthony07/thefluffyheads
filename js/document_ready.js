@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
   var $ = jQuery, doc = $(this), shadow = $('#header-shadow'), main = $('#main'),
-    wind0w = $(window), footer = $("#footer");
+    wind0w = $(window), footer = $("#footer"), menu = $("#main-menu");
 
   $('.white-paper .node:even').addClass('even');
   $('.white-paper .node:odd').addClass('odd');
@@ -19,14 +19,19 @@ jQuery(document).ready(function() {
       footer.css("left", footerLeft);
     }
   }
+
   adjustFooter();
   wind0w.resize(adjustFooter);
 
   //Show shadow under header when #main is under
+  //Sticky navigation
   doc.scroll(function() {
     var scrolled = $(window).scrollTop();
 
     if(scrolled > 50) shadow.show('fast');
     else shadow.hide('slow');
+
+    if(scrolled < (main.outerHeight() - 400))
+      menu.animate({"margin-top": scrolled}, 100);
   });
 });
