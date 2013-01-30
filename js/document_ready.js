@@ -32,7 +32,9 @@ jQuery(document).ready(function() {
     else shadow.hide('slow');
 
 
-    if(scrolled < (main.outerHeight() - 600))
-      menu.animate({"margin-top": scrolled}, 100);
+    if(scrolled >= (main.outerHeight() - 600))
+      menu.css({"position" : "absolute", "top" : main.outerHeight() - 600});
+    else
+      menu.css({"position" : "fixed", "top" : "5em"});
   });
 });

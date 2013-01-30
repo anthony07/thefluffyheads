@@ -161,6 +161,7 @@ function tfh_menu_link(&$variables) {
   $link = str_replace(" ", "-", $variables['element']['#original_link']['link_title']);
   $link_title = strtolower($link);
   $variables['element']['#attributes']['class'][] = $link_title;
+  $variables['element']['#attributes']['class'][] = "grayscale";
   if(drupal_is_front_page() && $link_title == 'home') $variables['element']['#attributes']['class'][] = "active-trail";
   return theme_menu_link($variables);
 }
