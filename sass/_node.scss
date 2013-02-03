@@ -20,12 +20,13 @@
 	.field-label {
 		display: block;
 		float: left;
-		width: 40px;
+		width: 30px;
 		height: 34px;
-		margin-right: 1em;
-		text-indent: -9999px;
-		background: $images;
-		background-position: -241px -65px;
+		margin-right: 3em;
+		text-indent: 1.8em;
+		color: #666;
+		font: normal 1em/2.1em "Georgina", sans-serif;
+		background: $images -35px -85px;
 	}
 
 	.field-item {
@@ -147,6 +148,11 @@ article.node {
 }
 
 #main-article {
+	position: relative;
+	padding: 0 0 0.5em;
+	margin: 0 0 2em;
+	border-bottom: 1px dashed rgb(201, 201, 201);
+
 	.field-name-field-image {
 		img {
 			margin: 1em 0 0;

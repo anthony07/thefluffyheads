@@ -96,9 +96,40 @@ a {
 	}
 }
 
-
 .hidden {
 	display: none;
+}
+
+.sharethis-buttons {
+	float: right;
+	padding-left: 2em;
+	height: 2em;
+	line-height: 2em;
+}
+
+.sharethis-wrapper {
+	background: #fefefe;
+}
+
+.read-more {
+	width: 25%;
+	max-width: 7em;
+	padding: 0.2em 0;
+	color: white;
+	text-align: center;
+	text-shadow: 0 0 2px rgb(0, 127, 167);
+	@include gradient-background(#61bee2, #3bb2dd);
+	border: 1px solid rgb(33, 173, 192);
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgb(190, 190, 190);
+
+	@include transition(none);
+
+	&:hover {
+		color: white;
+		background: rgb(71, 182, 224);
+		box-shadow: inset 0 1px 2px rgb(22, 169, 216);
+	}
 }
 
 #admin-toolbar * {
@@ -119,7 +150,7 @@ a {
 
 #wrapper {
 	position: relative;
-	max-width: 1280px;
+	max-width: 1320px;
 	margin: 0 auto;
 }
 
@@ -134,7 +165,7 @@ a {
 
 	.wrapper {
 		margin: 0 auto;
-		max-width: 1280px;
+		max-width: 1320px;
 	}
 }
 
@@ -234,7 +265,7 @@ a {
 			display: block;
 			margin: 0;
 			padding: 0;
-			height: 5.5em;
+			height: 6em;
 			list-style: none;
 			background: $rough_texture #fefefe;
 			border: 1px solid #ccc;
@@ -258,11 +289,11 @@ a {
 				height: 100%;
 				width: 100%;
 				margin: 0 auto;
-				background: $images -467px -51px;
+				background: $images -467px -55px;
 				font: 0.8em/1em "Georgina", serif;
 				color: #bcc22a;
 				text-align: center;
-				line-height: 140px;
+				line-height: 150px;
 				white-space: nowrap;
 			}
 		}
@@ -308,6 +339,7 @@ a {
 	.submitted {
 		font-size: 0.8em;
 		line-height: 2.2em;
+		width: 40em;
 	}
 
 	.user-picture {
@@ -412,7 +444,7 @@ a {
 
 #footer-art {
 	position: absolute;
-	bottom: -0.2em;
+	bottom: -3px;
 
 	a, a:visited {
 		display: block;
@@ -424,7 +456,7 @@ a {
 	.about-us {
 		height: 290px;
 		width: 225px;
-		top: -130px;
+		top: -100px;
 		left: 720px;
 		@include transition(all, 0.4s, ease-out);
 
@@ -436,26 +468,26 @@ a {
 	.site-map {
 		height: 110px;
 		width: 115px;
-		top: 0;
+		top: 70px;
 		left: 165px;
 		background-position: -245px -179px;
 		@include transition(all, 0.1s, ease-out);
 
 		&:hover {
-			top: -3px;
+			top: 66px;
 		}
 	}
 
 	.write-to-us {
 		height: 150px;
 		width: 130px;
-		top: -60px;
+		top: -30px;
 		left: 460px;
 		background-position: -229px 0;
 		@include transition(all, 0.2s, ease-out);
 
 		&:hover {
-			top: -70px;
+			top: -20px;
 			left: 470px;
 		}
 	}

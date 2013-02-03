@@ -1,4 +1,8 @@
-<?php if(!$page): ?>
+<?php
+  hide($content['links']);
+  hide($content['sharethis']);
+
+  if(!$page): ?>
 <article id="node-<?php print $node -> nid;?>" class="<?php print $classes . ' ' . $view_mode; ?>"<?php print $attributes;?>>
   <?php
     $body = field_get_items('node', $node, 'body');
@@ -24,6 +28,7 @@
     <?php endif;?>
       <?php print render($title_suffix);?>
       <?php print $user_picture;?>
+      <?php if(!$teaser) print render($content['sharethis']); ?>
       <?php if ($display_submitted):?>
       <blockquote class="submitted">
         <?php print "<p class='authored'>{$name} on {$date}</p>" ?>
@@ -35,9 +40,6 @@
 
   <section class="content"<?php print $content_attributes;?>>
   <?php
-    hide($content['links']);
-    hide($content['sharethis']);
-
     print render($content['field_image']);?>
 
   <?php if(!$page): ?>
