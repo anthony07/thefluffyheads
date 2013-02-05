@@ -91,6 +91,7 @@
 
       <?php if ($page['sidebar_second']): ?>
         <aside id="sidebar-second" role="complementary" class="sidebar">
+          <?php include_once('google-ads.php'); ?>
           <?php print render($page['sidebar_second']); ?>
         </aside>  <!-- /#sidebar-second -->
       <?php endif; ?>
@@ -101,9 +102,9 @@
 <footer id="footer" role="contentinfo" class="clearfix">
   <?php print render($page['footer']) ?>
   <div id="footer-art">
-    <a class="about-us" title="Abous Us" href="/about-us">About Us</a>
-    <a class="site-map" title="Site Map" href="/site-map">Site Map</a>
-    <a class="write-to-us" title="Write to Us" href="/contact">Write to Us</a>
+    <a class="about-us">About Us</a>
+    <a class="site-map">Site Map</a>
+    <a class="write-to-us">Write to Us</a>
     <img id="footer-base" src="http://files.thefluffyheads.com/assets/sprites/f-tfh.jpg" />
   </div>
 </footer> <!-- /#footer -->

@@ -100,6 +100,32 @@ a {
 	display: none;
 }
 
+.arrow {
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 25px;
+	right: -40px;
+	line-height: 0;
+	vertical-align: middle;
+	font-size: 30px;
+	border: 22px dashed transparent;
+	border-left: 25px solid #fefefe;
+}
+
+.sidebar-ads {
+	display: none;
+	margin: 0 auto 1em;
+	background: $rough_texture #ebdcac;
+  @include box-shadow(0, 1px, 3px, #888);
+
+	ins {
+		display: block !important;
+		margin: 0 auto !important;
+	}
+}
+
 .sharethis-buttons {
 	float: right;
 	padding-left: 2em;
@@ -279,6 +305,7 @@ a {
 
 			&.active-trail {
 				@extend .no-filter;
+				background: #fefefe;
 				box-shadow: 0 1px 3px rgba(66, 66, 66, 0.08);
 				z-index: 10;
 			}

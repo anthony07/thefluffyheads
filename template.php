@@ -62,7 +62,7 @@ function tfh_image_formatter($variables) {
     $options = $variables['path']['options'];
     $options['html'] = TRUE;
     //imporant to make the markup
-    $title = isset($image['title']) ? $image['title'] : "";
+    $title = isset($image['title']) ? $image['title'] : $image['alt'];
     $attributes = array('attributes' => array('rel' => 'lightbox-preview', 'title' => $title, 'alt' => $image['alt']));
     $link = array_merge($options, $attributes);
     $output = l($output, $path, $link);
@@ -73,7 +73,7 @@ function tfh_image_formatter($variables) {
     $options = $variables['path']['options'];
     $options['html'] = TRUE;
     //imporant to make the markup
-    $title = isset($image['title']) ? $image['title'] : 'View more';
+    $title = $variables['path']['options']['entity'] -> title;
     $attributes = array('attributes' => array('title' => $title, 'alt' => $image['alt']));
     $link = array_merge($options, $attributes);
     $output = l($output, $path, $link);
