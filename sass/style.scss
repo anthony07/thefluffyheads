@@ -81,6 +81,20 @@ a {
 	}
 }
 
+strong {
+	color: rgb(18, 180, 187);
+	font-size: 1.15em;
+}
+
+em, strong {
+	font-weight: bold;
+}
+
+i, q {
+	font-style: italic;
+	color: #888;
+}
+
 .no-filter {
  	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
  	-webkit-filter: grayscale(0%);
@@ -458,7 +472,7 @@ a {
 	}
 }
 
-@import 'node', 'highlighted', 'slimbox', 'sidebars';
+@import 'taxonomy', 'node', 'highlighted', 'slimbox', 'sidebars';
 
 #footer {
 	position: fixed;
@@ -520,7 +534,7 @@ a {
 	}
 }
 
-
+.clear { clear: both; }
 .clearfix { display: inline-block; }
 /* start commented backslash hack \*/
 * html .clearfix { height: 1%; }

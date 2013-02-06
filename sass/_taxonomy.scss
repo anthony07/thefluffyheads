@@ -1,0 +1,22 @@
+.taxonomy-term-description {
+  padding: 1em;
+  background: #fefefe;
+  @include uniform-rounded-corner;
+  @include box-shadow(0, 1px, 3px, rgb(173, 173, 173));
+
+  p {
+    color: #444;
+    font-size: 0.95em;
+    line-height: 1.9;
+  }
+}
+
+.fluffy-profile-img {
+  width: 100%;
+  max-width: 170px;
+  float: left;
+  margin: 2em 2em 2em 0;
+  border: 10px solid #E2E2E2;
+  @include uniform-rounded-corner(3px);
+  @include box-shadow(0, 1px, 5px, #636363);
+}

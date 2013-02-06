@@ -4,6 +4,10 @@ jQuery(document).ready(function() {
 
   var largeAd = $('#large-ad'), mediumAd = $('#medium-ad'), squareAd = $('#square-ad');
 
+  //move page title inside the box
+  var fluffyTitle = $('.fluffy-head-page #page-title');
+  $('.taxonomy-term-description p:first-child').before(fluffyTitle);
+
   $('.white-paper .node:even').addClass('even');
   $('.white-paper .node:odd').addClass('odd');
   //Remove all fixed width and height values from images
