@@ -1,3 +1,15 @@
+.sidebar-ads {
+  display: none;
+  margin: 0 auto 1em;
+  background: $rough_texture #e7da77;
+  @include box-shadow(0, 1px, 3px, #888);
+
+  ins {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
+
 .sidebar {
   section.block {
     position: relative;
@@ -43,6 +55,49 @@
     padding: 0;
     background: #fefefe;
     border-radius: 2px;
+  }
+}
+
+#flufffiest-stories {
+  background-color: #f7bbdc;
+
+  li.fluffy-node {
+    position: relative;
+    padding: 1em 0.8em;
+    margin: 0;
+    background: #ffeaf9;
+    border-top: 1px solid white;
+    border-bottom: 1px solid #eecedc;
+
+    img {
+      float: left;
+      margin-right: 0.5em;
+      @include uniform-rounded-corner(3px);
+      @include box-shadow(0, 1px, 3px, #9c8692);
+    }
+  }
+
+  h2.block-title {
+    text-shadow: 0 0 2px #be2d89;
+    background-color: #ec9dcd;
+  }
+
+
+  h4 {
+    font-size: 1.05em;
+    line-height: 1.5;
+  }
+
+  a {
+    color: #a74c70;
+
+    &:hover {
+      color: #e06c9a;
+    }
+  }
+
+  .block-icon {
+    background-position: -42px -42px;
   }
 }
 
@@ -111,7 +166,6 @@
     padding: 0;
     margin: 0;
     background: #f6fdef;
-    border-bottom: 1px solid #dee6d0;
   }
 
   h2.block-title {
@@ -136,7 +190,7 @@
     font-size: 0.9em;
     font-weight: normal;
     color: #496344;
-    background: #eaf3e4;
+    background: #eef8e4;
   }
 
   .dsq-widget-comment {

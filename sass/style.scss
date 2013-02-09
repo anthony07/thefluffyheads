@@ -128,18 +128,6 @@ i, q {
 	border-left: 25px solid #fefefe;
 }
 
-.sidebar-ads {
-	display: none;
-	margin: 0 auto 1em;
-	background: $rough_texture #ebdcac;
-  @include box-shadow(0, 1px, 3px, #888);
-
-	ins {
-		display: block !important;
-		margin: 0 auto !important;
-	}
-}
-
 .sharethis-buttons {
 	float: right;
 	padding-left: 2em;
