@@ -154,6 +154,13 @@ article.node {
 	margin: 0 0 2em;
 	border-bottom: 1px dashed rgb(201, 201, 201);
 
+	li {
+		margin: 0.5em 2em;
+		font-size: 0.95em;
+		list-style: disc;
+		color: #444;
+	}
+
 	.field-name-field-image {
 		img {
 			margin: 1em 0 0;

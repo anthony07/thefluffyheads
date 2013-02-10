@@ -40,7 +40,7 @@ jQuery(document).ready(function() {
       mediumAd.hide();
       squareAd.hide();
 
-      var footerLeft = (width-1024)/2;
+      var footerLeft = (width-1150)/2;
       footer.css("left", footerLeft);
     }
 

@@ -167,13 +167,15 @@ i, q {
 #container {
 	position: relative;
 	font-family: 'RobotoRegular', Arial, sans-serif;
-	margin: 2em auto 27em;
+	margin: 2em auto 29em;
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	background: $background;
 	box-shadow: 0 0.2em 0.5em #7a7a7a;
 	z-index: 1;
+
+	min-width: 850px;
 }
 
 #wrapper {
@@ -190,6 +192,8 @@ i, q {
 	top: 0;
 	width: 100%;
 	@include box-shadow(0, 1px, 3px, #b5b5b5);
+
+	min-width: 850px;
 
 	.wrapper {
 		margin: 0 auto;
@@ -466,9 +470,23 @@ i, q {
 	position: fixed;
 	bottom: 0;
 	margin: 0 auto;
-	max-width: 1024px;
-	height: 25em;
+	max-width: 1150px;
+	height: 26em;
 	width: 100%;
+
+	.content {
+		p {
+			font: normal 1.2em/1.5 'Roboto', sans-serif;
+			width: 500px;
+			color: #333;
+
+			&:first-letter {
+				font-family: 'Georgina', serif;
+				font-size: 1.4em;
+				text-indent: 1em;
+			}
+		}
+	}
 }
 
 #footer-art {

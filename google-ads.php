@@ -7,7 +7,7 @@
   google_ad_height = 280;
   //-->
   </script>
-  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+  <ins style="width: 336px; height: 280px; background: ivory"></ins>
 </div>
 
 <div id="medium-ad" class="sidebar-ads medium" data-width="300">
@@ -19,7 +19,7 @@
   google_ad_height = 250;
   //-->
   </script>
-  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+  <ins style="width: 300px; height: 250px; background: pink"></ins>
 </div>
 
 <div id="square-ad" class="sidebar-ads square" data-width="250">
@@ -31,5 +31,6 @@
   google_ad_height = 250;
   //-->
   </script>
-  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+  <ins style="width: 250px; height: 250px; background: white"></ins>
+  <!--<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>-->
 </div>
