@@ -1,8 +1,10 @@
 jQuery(document).ready(function() {
   var $ = jQuery, doc = $(this), shadow = $('#header-shadow'), main = $('#main'),
-    wind0w = $(window), footer = $("#footer"), menu = $("#main-menu");
+    wind0w = $(window), footer = $("#footer"), menu = $("#main-menu"),
+    gallery = $('.field-name-field-gallery');
 
-  var largeAd = $('#large-ad'), mediumAd = $('#medium-ad'), squareAd = $('#square-ad');
+  var largeAd = $('#large-ad'), mediumAd = $('#medium-ad'), squareAd = $('#square-ad'),
+    giantAd = $('#large-skyscraper-ad'), miniGiantAd = $('#wide-skyscraper-ad');
 
   //move page title inside the box
   var fluffyTitle = $('.fluffy-head-page #page-title');
@@ -16,26 +18,35 @@ jQuery(document).ready(function() {
   $('article.node:last-of-type').addClass('clearfix');
   //Add a pure css arrow on active-link
   menu.find('.active').after('<span class="arrow"></span>');
+  //Dynamic place a clear div in gallery field
+  gallery.find('.field-item:last-child').after('<div class="clear"></div>');
 
   var adPadding = function() {
     //Adjust top and bottom ad paddings dynamically
-    var visibleAd = $('.sidebar-ads:visible'), adSize = visibleAd.data("width"), adPads;
-    adPads = (visibleAd.outerWidth() - adSize) / 2;
-
-    visibleAd.css({'padding-top': adPads, 'padding-bottom' : adPads});
+    var visibleAd = $('.sidebar-ads:visible');
+    visibleAd.each(function() {
+      var adSize = $(this).data("width"),
+        adPads = ($(this).outerWidth() - adSize) / 2;
+      $(this).css({'padding-top': adPads, 'padding-bottom' : adPads});
+    });
   }, adjust = function() {
     //Adjust menu and footer contents in load and resize
     var width = wind0w.width(), footerBase = $('#footer-base');
-
     if(width <= 1154) {
+      giantAd.hide();
+      miniGiantAd.show();
       largeAd.hide();
       mediumAd.hide();
       squareAd.show();
     } else if(width <= 1293) {
+      giantAd.show();
+      miniGiantAd.hide();
       largeAd.hide();
       mediumAd.show();
       squareAd.hide();
     } else {
+      giantAd.show();
+      miniGiantAd.hide();
       largeAd.show();
       mediumAd.hide();
       squareAd.hide();
