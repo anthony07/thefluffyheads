@@ -164,26 +164,6 @@ i, q {
 	@include reset-box-sizing(content-box);
 }
 
-#container {
-	position: relative;
-	font-family: 'RobotoRegular', Arial, sans-serif;
-	margin: 2em auto 465px;
-	width: 100%;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	background: $background;
-	box-shadow: 0 0.2em 0.5em #7a7a7a;
-	z-index: 1;
-
-	min-width: 850px;
-}
-
-#wrapper {
-	position: relative;
-	max-width: 1320px;
-	margin: 0 auto;
-}
-
 #header {
 	background: $header_background;
 	position: fixed;
@@ -191,6 +171,7 @@ i, q {
 	left: 0;
 	top: 0;
 	width: 100%;
+	font-family: 'RobotoRegular', Arial, sans-serif;
 	@include box-shadow(0, 1px, 3px, #b5b5b5);
 
 	min-width: 850px;
@@ -199,6 +180,18 @@ i, q {
 		margin: 0 auto;
 		max-width: 1320px;
 	}
+}
+
+#header-shadow {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 3.8em;
+	@include box-shadow(0, 1px, 20px, #888);
+	@include uniform-rounded-corner(30%);
+	z-index: 4;
+	color: transparent;
 }
 
 #logo {
@@ -218,6 +211,26 @@ i, q {
 		text-indent: -9999px;
 		background: $images -170px 2px;
 	}
+}
+
+#container {
+	position: relative;
+	margin: 2em auto 425px;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-family: 'RobotoRegular', Arial, sans-serif;
+	background: $background;
+	box-shadow: 0 0.2em 0.5em #7a7a7a;
+	z-index: 1;
+
+	min-width: 850px;
+}
+
+#wrapper {
+	position: relative;
+	max-width: 1320px;
+	margin: 0 auto;
 }
 
 #site-name-slogan {
@@ -459,20 +472,18 @@ i, q {
 	bottom: 0;
 	margin: 0 auto;
 	max-width: 1150px;
-	height: 460px;
+	height: 420px;
 	width: 100%;
 
 	.content {
 		p {
-			font: normal 1.2em/1.5 'Roboto', sans-serif;
+			font: normal 1em/1.5 'Georgina', serif;
 			width: 100%;
 			max-width: 500px;
 			color: #333;
 
 			&:first-letter {
-				font-family: 'Georgina', serif;
-				font-size: 1.4em;
-				text-indent: 1em;
+				font-size: 1.5em;
 			}
 		}
 	}

@@ -1,3 +1,28 @@
+<header id="header" role="banner" class="clearfix">
+  <div class="wrapper">
+  <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" id="logo">
+        <h1 id="site-title" role="banner">The Fluffy Heads</h1>
+      </a>
+    <?php endif; ?>
+    <?php if ($site_name || $site_slogan): ?>
+      <hgroup id="site-name-slogan">
+        <?php if ($site_name): ?>
+          <h1 id="site-name">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><span><?php print $site_name; ?></span></a>
+          </h1>
+        <?php endif; ?>
+        <?php if ($site_slogan): ?>
+          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+        <?php endif; ?>
+      </hgroup>
+    <?php endif; ?>
+
+    <?php print render($page['header']); ?>
+  </div>
+</header> <!-- /#header -->
+<div id="header-shadow" class="empty block"></div>
+
 <div id="container" class="clearfix">
   <div id="wrapper" class="clearfix">
     <div id="skip-link">
@@ -6,30 +31,6 @@
         <a href="#navigation" class="element-invisible element-focusable"><?php print t('Skip to navigation'); ?></a>
       <?php endif; ?>
     </div>
-
-    <header id="header" role="banner" class="clearfix">
-      <div class="wrapper">
-    	<?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" id="logo">
-            <h1 id="site-title" role="banner">The Fluffy Heads</h1>
-          </a>
-        <?php endif; ?>
-        <?php if ($site_name || $site_slogan): ?>
-          <hgroup id="site-name-slogan">
-            <?php if ($site_name): ?>
-              <h1 id="site-name">
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><span><?php print $site_name; ?></span></a>
-              </h1>
-            <?php endif; ?>
-            <?php if ($site_slogan): ?>
-              <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-            <?php endif; ?>
-          </hgroup>
-        <?php endif; ?>
-
-        <?php print render($page['header']); ?>
-      </div>
-    </header> <!-- /#header -->
 
     <?php if ($main_menu || $secondary_menu || !empty($page['navigation'])): ?>
     <nav id="navigation" role="navigation" class="clearfix">

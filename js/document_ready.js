@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-  var $ = jQuery, doc = $(this), main = $('#main'), wind0w = $(window), footer = $("#footer"), menu = $("#main-menu"), gallery = $('.field-name-field-gallery');
+  var $ = jQuery, doc = $(this), main = $('#main'), wind0w = $(window), shadow = $('#header-shadow'), footer = $("#footer"), menu = $("#main-menu"), gallery = $('.field-name-field-gallery');
 
   var largeAd = $('#large-ad'), mediumAd = $('#medium-ad'), squareAd = $('#square-ad');
 
@@ -56,6 +56,9 @@ jQuery(document).ready(function() {
   //Sticky navigation
   doc.scroll(function() {
     var scrolled = $(window).scrollTop();
+
+    if(scrolled > 50) shadow.show('fast');
+    else shadow.hide('slow');
 
     if(scrolled >= (main.outerHeight() - 600))
       menu.css({"position" : "absolute", "top" : main.outerHeight() - 600});
