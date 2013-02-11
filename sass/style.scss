@@ -167,7 +167,7 @@ i, q {
 #container {
 	position: relative;
 	font-family: 'RobotoRegular', Arial, sans-serif;
-	margin: 2em auto 29em;
+	margin: 2em auto 465px;
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -199,18 +199,6 @@ i, q {
 		margin: 0 auto;
 		max-width: 1320px;
 	}
-}
-
-#header-shadow {
-	display: none;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 3.8em;
-	@include box-shadow(0, 1px, 20px, #888);
-	@include uniform-rounded-corner(30%);
-	z-index: 4;
-	color: transparent;
 }
 
 #logo {
@@ -471,13 +459,14 @@ i, q {
 	bottom: 0;
 	margin: 0 auto;
 	max-width: 1150px;
-	height: 26em;
+	height: 460px;
 	width: 100%;
 
 	.content {
 		p {
 			font: normal 1.2em/1.5 'Roboto', sans-serif;
-			width: 500px;
+			width: 100%;
+			max-width: 500px;
 			color: #333;
 
 			&:first-letter {
@@ -491,7 +480,7 @@ i, q {
 
 #footer-art {
 	position: absolute;
-	bottom: -3px;
+	bottom: 18px;
 
 	a, a:visited {
 		display: block;
@@ -537,6 +526,25 @@ i, q {
 			top: -20px;
 			left: 470px;
 		}
+	}
+}
+
+#cc-license {
+	position: fixed;
+	width: 100%;
+	height: 22px;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	font: normal 0.7em/22px "Roboto",sans-serif;
+	text-align: center;
+	color: #bbb;
+	background: #464646;
+	z-index: 0;
+
+	img {
+		margin-right: 0.5em;
+		vertical-align: -3px;
 	}
 }
 

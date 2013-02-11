@@ -31,8 +31,6 @@
       </div>
     </header> <!-- /#header -->
 
-    <div id="header-shadow" class="empty block"></div>
-
     <?php if ($main_menu || $secondary_menu || !empty($page['navigation'])): ?>
     <nav id="navigation" role="navigation" class="clearfix">
       <?php if (!empty($page['navigation'])): ?> <!--if block in navigation region, override $main_menu and $secondary_menu-->
@@ -91,7 +89,6 @@
       <?php endif; ?>
 
       <aside id="sidebar-second" role="complementary" class="sidebar">
-        <?php include_once('bottom-google-ads.php'); ?>
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     </section>
@@ -106,6 +103,8 @@
     <a class="write-to-us">Write to Us</a>
     <img id="footer-base" src="http://files.thefluffyheads.com/assets/sprites/f-tfh.jpg" />
   </div>
+  <p id="cc-license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+    <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The Fluffy Heads</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+  </p>
 </footer> <!-- /#footer -->
-
-<?php if(isset($story_proper)) print 'hello'; ?>

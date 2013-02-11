@@ -1,10 +1,7 @@
 jQuery(document).ready(function() {
-  var $ = jQuery, doc = $(this), shadow = $('#header-shadow'), main = $('#main'),
-    wind0w = $(window), footer = $("#footer"), menu = $("#main-menu"),
-    gallery = $('.field-name-field-gallery');
+  var $ = jQuery, doc = $(this), main = $('#main'), wind0w = $(window), footer = $("#footer"), menu = $("#main-menu"), gallery = $('.field-name-field-gallery');
 
-  var largeAd = $('#large-ad'), mediumAd = $('#medium-ad'), squareAd = $('#square-ad'),
-    giantAd = $('#large-skyscraper-ad'), miniGiantAd = $('#wide-skyscraper-ad');
+  var largeAd = $('#large-ad'), mediumAd = $('#medium-ad'), squareAd = $('#square-ad');
 
   //move page title inside the box
   var fluffyTitle = $('.fluffy-head-page #page-title');
@@ -33,20 +30,14 @@ jQuery(document).ready(function() {
     //Adjust menu and footer contents in load and resize
     var width = wind0w.width(), footerBase = $('#footer-base');
     if(width <= 1154) {
-      giantAd.hide();
-      miniGiantAd.show();
       largeAd.hide();
       mediumAd.hide();
       squareAd.show();
     } else if(width <= 1293) {
-      giantAd.show();
-      miniGiantAd.hide();
       largeAd.hide();
       mediumAd.show();
       squareAd.hide();
     } else {
-      giantAd.show();
-      miniGiantAd.hide();
       largeAd.show();
       mediumAd.hide();
       squareAd.hide();
@@ -65,10 +56,6 @@ jQuery(document).ready(function() {
   //Sticky navigation
   doc.scroll(function() {
     var scrolled = $(window).scrollTop();
-
-    if(scrolled > 50) shadow.show('fast');
-    else shadow.hide('slow');
-
 
     if(scrolled >= (main.outerHeight() - 600))
       menu.css({"position" : "absolute", "top" : main.outerHeight() - 600});
