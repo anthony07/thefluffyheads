@@ -5,7 +5,7 @@
 <html version="HTML+RDFa 1.1" class="" lang="<?php print $language -> language; ?>" dir="<?php print $language -> dir; ?>" xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/">
   <!--<![endif]-->
   <head>
-    <title>The Fluffy Heads</title>
+    <title><?php print $head_title; ?></title>
     <?php print $head; ?>
   <!--[if (gte IE 6)&(lte IE 8)]>
     <script type="text/javascript" src="http://files.thefluffyheads.com/polyfills/html5shiv.js"></script>
