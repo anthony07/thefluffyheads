@@ -237,36 +237,6 @@ i, q {
 	display: none;
 }
 
-#block-search-form {
-	position: relative;
-	float: right;
-	margin: 0.8em 0 0 0;
-
-	input[type='text'] {
-		width: 23.4em;
-		height: 2.5em;
-		padding: 0.5em 1em;
-		border: 1px solid;
-		border-color: #aaa #ddd #eee;
-		border-radius: 3px;
-		line-height: 1.6em;
-		font-size: 0.9em;
-	}
-
-	input[type='submit'] {
-		background: $images;
-		background-position: -5px -83px;
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 2em;
-		height: 100%;
-		text-indent: 999em;
-		opacity: 0.3;
-		cursor: pointer;
-	}
-}
-
 #navigation {
 	float: left;
 	width: 13%;
@@ -465,7 +435,7 @@ i, q {
 	}
 }
 
-@import 'taxonomy', 'node', 'highlighted', 'slimbox', 'sidebars';
+@import 'taxonomy', 'node', 'highlighted', 'slimbox', 'sidebars', 'search';
 
 #footer {
 	position: fixed;
