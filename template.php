@@ -86,13 +86,33 @@ function tfh_image_formatter($variables) {
  * Override or insert variables into the node template.
  */
 function tfh_preprocess_node(&$variables) {
-  $variables['submitted'] = t('Published by !username on !datetime', array('!username' => $variables['name'], '!datetime' => $variables['date']));
-  if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
-    $variables['classes_array'][] = 'node-full';
-    include 'fluffy_node.php';
+  $variables['title'] = t($variables['title']);
+  $node = $variables['node'];
+  $view_mode = $variables['view_mode'];
 
-    $variables['hello'] = fluffy_format($variables['content']);
+  switch ($view_mode) {
+    case 'full':
+      if(node_is_page($node)) {
+        $variables['classes_array'][] = 'node-full';
+        include 'gallery.php';
+      }
+      break;
+
+    case 'teaser':
+    case 'highlighted_node':
+      $body =field_get_items('node', $node, 'body');
+      $teaser= $body[0]['summary'];
+      $variables['summary'] = $teaser;
+      $variables['age'] = age($variables['date']);
+      break;
+
+    default:
+      # code...
+      break;
   }
+
+  if ($view_mode == 'teaser') $variables['theme_hook_suggestions'][] = 'node__teaser';
+  elseif ($view_mode == 'highlighted_node') $variables['theme_hook_suggestions'][] = 'node__highlighted_node';
 }
 
 /**
@@ -164,4 +184,41 @@ function tfh_menu_link(&$variables) {
   $variables['element']['#attributes']['class'][] = "grayscale";
   if(drupal_is_front_page() && $link_title == 'home') $variables['element']['#attributes']['class'][] = "active-trail";
   return theme_menu_link($variables);
+}
+
+/**
+ * Utility function that converts date to timestamp
+ */
+function age($date) {
+  $datetime = new DateTime($date);
+  $elapsedtime = calculateAge($datetime->format('U'));
+  return $elapsedtime;
+}
+
+/**
+ * Utility function that gets tweet age
+ */
+function calculateAge($iTimestamp) {
+  $iCurrentTimestamp = time();
+
+  $iDifference = $iCurrentTimestamp - $iTimestamp;
+
+  $iOriginalDifference = $iDifference;
+  $periods = array("second", "minute", "hour", "day", "week", "month", "year", "decade");
+  $lengths = array("60","60","24","7","4.35","12","10");
+
+  for($j = 0; $iDifference >= $lengths[$j]; $j++)
+    $iDifference /= $lengths[$j];
+
+  if ($j == 6) {
+     $sReturn = date('M Y',time() - $iOriginalDifference);
+  } else {
+    $iDifference = round($iDifference);
+    if($iDifference != 1) $periods[$j] .= "s";
+    $sReturn = $iDifference . " " . $periods[$j] . " ago";
+  }
+
+  if (trim($sReturn) == '1 day ago') $sReturn = "yesterday";
+
+  return $sReturn;
 }

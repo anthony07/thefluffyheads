@@ -1,14 +1,10 @@
 jQuery(document).ready(function() {
   var $ = jQuery, doc = $(this), main = $('#main'), wind0w = $(window), shadow = $('#header-shadow'), footer = $("#footer"), menu = $("#main-menu"), gallery = $('.field-name-field-gallery');
-
   var largeAd = $('#large-ad'), mediumAd = $('#medium-ad'), squareAd = $('#square-ad');
 
   //move page title inside the box
   var fluffyTitle = $('.fluffy-head-page #page-title');
   $('.taxonomy-term-description p:first-child').before(fluffyTitle);
-
-  $('.white-paper .node:even').addClass('even');
-  $('.white-paper .node:odd').addClass('odd');
   //Remove all fixed width and height values from images
   $('img').removeAttr('width').removeAttr('height');
   //This for the Pager to have room for margin
@@ -17,6 +13,21 @@ jQuery(document).ready(function() {
   menu.find('.active').after('<span class="arrow"></span>');
   //Dynamic place a clear div in gallery field
   gallery.find('.field-item:last-child').after('<div class="clear"></div>');
+  //Arrange node cards
+  var left = $('#left-column'), right = $('#right-column');
+  var nodes = $('.node-teaser'), nodeCounter = 1;
+  nodes.each(function() {
+    var current = $(this);
+    switch(nodeCounter % 2) {
+      case 0:
+        current.appendTo(right);
+        break;
+      default:
+        current.appendTo(left);
+        break;
+    }
+    nodeCounter++;
+  });
 
   var adPadding = function() {
     //Adjust top and bottom ad paddings dynamically

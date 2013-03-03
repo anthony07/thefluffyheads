@@ -1,3 +1,9 @@
+.node-summary {
+	padding: 0 1em 1em;
+	font: normal 13px/1.8 'RobotoRegular', sans-serif;
+	color: #555;
+}
+
 .field-name-field-tags {
 	margin: 2em 0 1em;
 
@@ -37,26 +43,16 @@
 
 article.node {
 	position: relative;
-	float: left;
-	width: 48%;
-	height: inherit;
-	min-width: 15em;
-	max-width: 24em;
-	min-height: 26em;
-	margin: 1.5em 0;
+	width: 100%;
+	margin: 2em 0;
 	padding: 0;
 
-	background-color: #fefefe;
-	border:1px solid white;
+	background-color: white;
 
-	border-radius: 5px;
 	box-shadow: 0 1px 4px #999;
 
-	&.odd {
-		margin-left: 4%;
-	}
 	header{
-		padding: 0.8em 3.8em 0.5em 0.8em;
+		padding: 0.2em 0.8em 0.5em;
 	}
 
 	.node-title {
@@ -69,16 +65,20 @@ article.node {
 		}
 	}
 
+	.submission {
+		display: block;
+		padding: 0 1em 1em;
+		font-size: 11px;
+		color: #aaa;
+	}
+
+	.posted {
+		color: #bbb;
+		white-space: nowrap;
+	}
+
 	.user-picture {
-		position: absolute;
-		top: -0.2em;
-		right: -0.15em;
-		padding: 0.5em 0.1em 0.5em 0.3em;
-		border: 2px solid;
-		border-top: none;
-		border-right: none;
-		@include specific-rounded-corner(0, 5px, 35%, 0);
-		box-shadow: 0 1px 3px #494949;
+		display: none;
 	}
 	//random rae
 	.user-4 .user-picture {
@@ -111,28 +111,38 @@ article.node {
 		}
 	}
 
-	.read-more {
+	.read-more, .view-card {
 		display: block;
 		position: absolute;
 		bottom: 0;
 		right: 0;
+	}
 
-		&.teaser {
-			top: 0;
-			left: 0;
-			opacity: 0;
+	.view-card {
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-width: 100%;
+		text-indent: -999em;
+		font-family: 'Georgina', Georgia, serif;
+		background: none;
+		border: none;
+		@include transition;
+
+		&:hover {
+			text-indent: 0;
+			text-align: center;
+			text-transform: capitalize;
+			line-height: 10em;
+			font-size: 2em;
+			color: white;
+			background: rgba(0, 0, 0, 0.2);
+			border: none;
+			box-shadow: none;
 		}
 	}
 
 	&.teaser {
-		&:hover {
-			margin-top: 1em;
-			margin-bottom: 2em;
-			box-shadow: 0 0.3em 1em #666;
-			-webkit-transition: all 0.2s ease-in;
-			-moz-transition: all 0.2s ease-in;
-		}
-
 		.field-name-field-image {
 			img {
 				position: relative;
