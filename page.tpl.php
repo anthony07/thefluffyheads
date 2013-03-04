@@ -45,18 +45,26 @@
     </nav>
     <?php endif; ?>
     <!-- /#navigation -->
-
-    <section id="main" role="main" class="<?php ($is_front || arg(0) == 'taxonomy') ? print 'front-page' : print 'article-page'; ?> <?php (arg(0) == 'taxonomy') ? print 'fluffy-head-page' : print 'page'; ?>">
+    <?php
+      $page_type = ($is_front || arg(0) == 'taxonomy') ? print 'front-page' : print 'article-page';
+      $section = (arg(0) == 'taxonomy') ? print 'fluffy-head-page' : print 'page';
+    ?>
+    <section id="main" role="main" class="<?php print $page_type . ' ' . $section; ?>">
       <?php print $messages; ?>
-    <?php if ($page['highlighted']): ?>
-      <div id="highlighted" class="clearfix"><?php print render($page['highlighted']); ?></div>
-    <?php endif; ?>
+      <?php if ($page['highlighted']): ?>
+        <div id="highlighted" class="clearfix">
+          <?php print render($page['highlighted']); ?>
+        </div>
+      <?php endif; ?>
+
       <div class="white-paper">
-        <?php if($is_front || arg(0) == 'taxonomy'): ?>
-          <div id="left-column" class="node-column"></div>
-          <div id="right-column" class="node-column"></div>
-          <div class="clear"></div>
+        <?php if($page_type == 'front-page'): ?>
+          <section id="cards" class="clearfix">
+            <div id="left-cards" class="node-column"></div>
+            <div id="right-cards" class="node-column"></div>
+          </section>
         <?php endif; ?>
+
         <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
         <?php print render($title_suffix); ?>

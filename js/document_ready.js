@@ -5,8 +5,6 @@ jQuery(document).ready(function() {
   //move page title inside the box
   var fluffyTitle = $('.fluffy-head-page #page-title');
   $('.taxonomy-term-description p:first-child').before(fluffyTitle);
-  //Remove all fixed width and height values from images
-  $('img').removeAttr('width').removeAttr('height');
   //This for the Pager to have room for margin
   $('article.node:last-of-type').addClass('clearfix');
   //Add a pure css arrow on active-link
@@ -14,8 +12,9 @@ jQuery(document).ready(function() {
   //Dynamic place a clear div in gallery field
   gallery.find('.field-item:last-child').after('<div class="clear"></div>');
   //Arrange node cards
-  var left = $('#left-column'), right = $('#right-column');
-  var nodes = $('.node-teaser'), nodeCounter = 1;
+  var left = $('#left-cards'), right = $('#right-cards');
+  var nodes = $('.node-teaser'), cardWrapper = $('.white-paper > .content'), cards = $('#cards'), nodeCounter = 1;
+  cards.appendTo(cardWrapper);
   nodes.each(function() {
     var current = $(this);
     switch(nodeCounter % 2) {
@@ -26,7 +25,7 @@ jQuery(document).ready(function() {
         current.appendTo(left);
         break;
     }
-    nodeCounter++;
+    ++nodeCounter;
   });
 
   var adPadding = function() {

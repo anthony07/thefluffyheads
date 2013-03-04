@@ -40,8 +40,8 @@ function tfh_image_formatter($variables) {
   }
 
   if (isset($item['width']) && isset($item['height'])) {
-    $image['width'] = $item['width'];
-    $image['height'] = $item['height'];
+    unset($item['width']);
+    unset($item['height']);
   }
 
   // Do not output an empty 'title' attribute.
@@ -101,7 +101,7 @@ function tfh_preprocess_node(&$variables) {
     case 'teaser':
     case 'highlighted_node':
       $body =field_get_items('node', $node, 'body');
-      $teaser= $body[0]['summary'];
+      $teaser = $body[0]['summary'];
       $variables['summary'] = $teaser;
       $variables['age'] = age($variables['date']);
       break;
@@ -187,7 +187,8 @@ function tfh_menu_link(&$variables) {
 }
 
 /**
- * Utility function that converts date to timestamp
+ * utility function that converts date to timestamp
+ * @param standard time format
  */
 function age($date) {
   $datetime = new DateTime($date);
@@ -196,7 +197,8 @@ function age($date) {
 }
 
 /**
- * Utility function that gets tweet age
+ * utility function that gets tweet age
+ * @param timestamp
  */
 function calculateAge($iTimestamp) {
   $iCurrentTimestamp = time();

@@ -55,7 +55,7 @@ table {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Georgina', Georgia, serif;
+	font-family: 'Georgina', serif;
 }
 
 h1 {
@@ -95,6 +95,32 @@ i, q {
 	color: #888;
 }
 
+.clear {
+	clear: both;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+// start commented backslash hack \
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+// close commented backslash hack
+.clearfix:after {
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+}
+
 .no-filter {
  	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
  	-webkit-filter: grayscale(0%);
@@ -126,6 +152,29 @@ i, q {
 	font-size: 30px;
 	border: 22px dashed transparent;
 	border-left: 25px solid #fefefe;
+}
+
+.button {
+  display: inline-block;
+  line-height: 2.8em;
+  height: 2.78em;
+  text-decoration: none;
+  padding: 0 .91em;
+  border-width: 1px;
+  border-style: solid;
+  outline: 0;
+  font-weight: bold;
+  font-size: 0.8em;
+  white-space: nowrap;
+  word-wrap: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  @include gradient-background;
+  @include uniform-rounded-corner(2px);
+  @include inner-shadow(0, 1px, 0, white);
+  color: #555;
+  text-shadow: 0 1px 0 white;
+  border-color: #ccc #ccc #aaa;
 }
 
 .sharethis-buttons {
@@ -419,11 +468,11 @@ i, q {
 	}
 }
 
-#left-column {
+#left-cards {
 	padding-right: 0.5em;
 }
 
-#right-column {
+#right-cards {
 	padding-left: 0.5em;
 }
 
@@ -437,16 +486,14 @@ i, q {
 	height: 420px;
 	width: 100%;
 
-	.content {
-		p {
-			font: normal 1em/1.5 'Georgina', serif;
-			width: 100%;
-			max-width: 500px;
-			color: #333;
+	p {
+		font: normal 1em/1.5 'Georgina', serif;
+		width: 100%;
+		max-width: 500px;
+		color: #333;
 
-			&:first-letter {
-				font-size: 1.5em;
-			}
+		&:first-letter {
+			font-size: 1.5em;
 		}
 	}
 }
@@ -519,41 +566,4 @@ i, q {
 		margin-right: 0.5em;
 		vertical-align: -3px;
 	}
-}
-
-.clear { clear: both; }
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
-.clearfix:after {
-   display: block;
-   font-size: 0;
-   content: " ";
-   clear: both;
-   height: 0;
-}
-
-.button {
-  display: inline-block;
-  line-height: 2.8em;
-  height: 2.78em;
-  text-decoration: none;
-  padding: 0 .91em;
-  border-width: 1px;
-  border-style: solid;
-  outline: 0;
-  font-weight: bold;
-  font-size: 0.8em;
-  white-space: nowrap;
-  word-wrap: normal;
-  vertical-align: middle;
-  cursor: pointer;
-  @include gradient-background;
-  @include uniform-rounded-corner(2px);
-  @include inner-shadow(0, 1px, 0, white);
-  color: #555;
-  text-shadow: 0 1px 0 white;
-  border-color: #ccc #ccc #aaa;
 }

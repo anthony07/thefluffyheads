@@ -1,28 +1,23 @@
 <?php
-  $read_more = "<a href='{$node_url}' title='{$title}' class='view-card {$view_mode}'>
-    read more <span class='element-invisible'>about {$node -> title}</span>
+  $read_more = "<a href='{$node_url}' title='{$title}' class='view-card'>
+    read more <span class='element-invisible'>about {$title}</span>
     </a>";
 ?>
 
-<article id="node-<?php print $node -> nid;?>" class="<?php print $classes . ' ' . $view_mode; ?>"<?php print $attributes;?>>
+<article id="teaser-<?php print $node -> nid;?>" class="<?php print $classes;?>"<?php print $attributes;?>>
   <?php print render($content['field_image']);?>
-  <header>
-    <h2<?php print $title_attributes;?> class="node-title">
-      <?php print $title;?>
-    </h2>
-  </header>
+  <h2<?php print $title_attributes;?> class="node-title">
+    <?php print $title;?>
+  </h2>
 
-  <section class="content"<?php print $content_attributes;?> property="content:encoded">
-    <p class="node-summary">
-      <?php print "{$summary} {$read_more}"; ?>
-    </p>
-  </section>
+  <p class="summary"<?php print $content_attributes;?> property="content:encoded">
+    <?php print "{$summary} {$read_more}"; ?>
+  </p>
 
   <blockquote class="submission">
     <?php
       print $user_picture;
-      print "<p class='authored'><span class='author hidden'>{$name}</span><span class='posted'>{$age}</span></p>";
+      print "<p class='authored'>{$name}<span class='date hidden' property='dc:date dc:created' content='{$date}' datatype='xsd:dateTime'>{$age}</span></p>";
     ?>
   </blockquote>
-
 </article>
