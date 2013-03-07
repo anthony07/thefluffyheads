@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
   gallery.find('.field-item:last-child').after('<div class="clear"></div>');
   //Arrange node cards
   var left = $('#left-cards'), right = $('#right-cards');
-  var nodes = $('.node-teaser'), cardWrapper = $('.white-paper > .content'), cards = $('#cards'), nodeCounter = 1;
+  var nodes = $('.node-teaser'), cardWrapper = $('.term-listing-heading'), cards = $('#cards'), nodeCounter = 1;
   cards.appendTo(cardWrapper);
   nodes.each(function() {
     var current = $(this);

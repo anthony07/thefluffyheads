@@ -46,8 +46,8 @@
     <?php endif; ?>
     <!-- /#navigation -->
     <?php
-      $page_type = ($is_front || arg(0) == 'taxonomy') ? print 'front-page' : print 'article-page';
-      $section = (arg(0) == 'taxonomy') ? print 'fluffy-head-page' : print 'page';
+      $page_type = ($is_front || arg(0) == 'taxonomy') ? 'front-page' : 'article-page';
+      $section = (arg(0) == 'taxonomy') ? 'fluffy-head-page' : 'page';
     ?>
     <section id="main" role="main" class="<?php print $page_type . ' ' . $section; ?>">
       <?php print $messages; ?>

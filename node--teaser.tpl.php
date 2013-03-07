@@ -1,6 +1,6 @@
 <?php
-  $read_more = "<a href='{$node_url}' title='{$title}' class='view-card'>
-    read more <span class='element-invisible'>about {$title}</span>
+  $read_more = "<a href='{$node_url}' about='{$title}' class='view-card'>
+    read full article<span class='element-invisible'>about {$title}</span>
     </a>";
 ?>
 
@@ -17,7 +17,7 @@
   <blockquote class="submission">
     <?php
       print $user_picture;
-      print "<p class='authored'>{$name}<span class='date hidden' property='dc:date dc:created' content='{$date}' datatype='xsd:dateTime'>{$age}</span></p>";
+      print "<p class='authored'>{$name}<span class='date' property='dc:date dc:created' content='{$date}' datatype='xsd:dateTime'>{$age}</span></p>";
     ?>
   </blockquote>
 </article>

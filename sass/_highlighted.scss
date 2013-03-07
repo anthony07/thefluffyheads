@@ -1,14 +1,18 @@
 .read-more {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
 	width: 25%;
+	height: 32px;
 	max-width: 7em;
-	padding: 0.2em 0;
+	padding: 0;
 	color: white;
+	line-height: 32px;
 	text-align: center;
 	text-shadow: 0 0 2px rgb(0, 127, 167);
 	@include gradient-background(#61bee2, #3bb2dd);
 	border: 1px solid rgb(33, 173, 192);
 	border-radius: 3px;
-	box-shadow: 0 0 2px rgb(190, 190, 190);
 
 	@include transition(none);
 
@@ -21,13 +25,24 @@
 
 #highlighted {
 	width: 100%;
+	background: white;
+	overflow: hidden;
 
-
-	article.node {
+	article {
 		width: 100%;
 		max-width: inherit;
 		margin: 0;
 		padding-bottom: 3.5em;
+	}
+
+	.block-title {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		font-size: 12px;
+		color: white;
+		background: #333;
 	}
 
 	.node-title {
@@ -73,10 +88,5 @@
 			border: 10px solid #f7f7f7;
 			@include box-shadow(0, 1px, 3px, #aaa);
 		}
-	}
-
-	.read-more {
-		bottom: 0.5em;
-		right: 0.5em;
 	}
 }

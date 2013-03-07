@@ -1,7 +1,17 @@
-.node-summary {
-	padding: 0 1em 1em;
-	font: normal 13px/1.8 'RobotoRegular', sans-serif;
-	color: #555;
+.field-name-field-gallery {
+	img {
+		float: left;
+		margin: 1em 0.5em 0 0;
+	}
+}
+
+.field-name-body {
+	p {
+		margin: 1.5em 0 0;
+		font-size: 0.95em;
+		line-height: 1.8em;
+		color: #333;
+	}
 }
 
 .field-name-field-tags {
@@ -41,22 +51,17 @@
 	}
 }
 
-article.node {
+.node-teaser {
 	position: relative;
 	width: 100%;
-	margin: 2em 0;
+	margin: 1em 0;
 	padding: 0;
-
 	background-color: white;
-
-	box-shadow: 0 1px 4px #999;
-
-	header{
-		padding: 0.2em 0.8em 0.5em;
-	}
+	box-shadow: 0 1px 2px #bbb;
 
 	.node-title {
 		margin-bottom: 0.25em;
+		padding: 0.5em 11px;
 		font-size: 1.2em;
 		line-height: 1.1em;
 
@@ -67,18 +72,22 @@ article.node {
 
 	.submission {
 		display: block;
-		padding: 0 1em 1em;
+		padding: 1em 12px;
 		font-size: 11px;
-		color: #aaa;
+		color: #999;
+		background: #f9f9f9;
+		border-top: 1px dashed #e4e4e4;
 	}
 
-	.posted {
-		color: #bbb;
-		white-space: nowrap;
+	.date {
+		margin-left: 1em;
 	}
 
 	.user-picture {
 		display: none;
+		position: absolute;
+		top: 0;
+		left: 1em;
 	}
 	//random rae
 	.user-4 .user-picture {
@@ -96,35 +105,23 @@ article.node {
 		border-color: #98df9b;
 	}
 
-	.submitted {
-		color: #999;
+	.summary {
+		padding: 0 12px 1em;
+		font: normal 13px/1.8 'RobotoRegular', sans-serif;
+		color: #565656
 	}
 
-	.field-name-body{
-		margin-top: 0.5em;
-
-		p {
-			padding: 0 1em;
-			font-size: 0.8em;
-			line-height: 1.8em;
-			color: #444;
-		}
-	}
-
-	.read-more, .view-card {
+	.view-card {
 		display: block;
 		position: absolute;
 		bottom: 0;
 		right: 0;
-	}
-
-	.view-card {
 		top: 0;
 		left: 0;
 		width: 100%;
 		max-width: 100%;
 		text-indent: -999em;
-		font-family: 'Georgina', Georgia, serif;
+		font-family: Arial, sans-serif;
 		background: none;
 		border: none;
 		@include transition;
@@ -133,20 +130,12 @@ article.node {
 			text-indent: 0;
 			text-align: center;
 			text-transform: capitalize;
-			line-height: 10em;
+			line-height: 13em;
 			font-size: 2em;
 			color: white;
-			background: rgba(0, 0, 0, 0.2);
+			background: rgba(5, 5, 3, 0.5);
 			border: none;
 			box-shadow: none;
-		}
-	}
-
-	&.teaser {
-		.field-name-field-image {
-			img {
-				position: relative;
-			}
 		}
 	}
 }
@@ -175,22 +164,6 @@ article.node {
 			margin: 1em 0 0;
 			border: 10px solid #f7f7f7;
 			@include box-shadow(0, 1px, 3px, #bbb);
-		}
-	}
-
-	.field-name-body {
-		p {
-			margin: 1.5em 0 0;
-			font-size: 0.95em;
-			line-height: 1.8em;
-			color: #333;
-		}
-	}
-
-	.field-name-field-gallery {
-		img {
-			float: left;
-			margin: 1em 0.5em 0 0;
 		}
 	}
 }
