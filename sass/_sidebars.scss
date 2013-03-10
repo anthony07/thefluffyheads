@@ -11,24 +11,24 @@
 }
 
 .sidebar {
-  section.block {
+  .block {
     position: relative;
-    margin: 0 0 1em;
-    padding: 2em 0 0.5em;
-    background: $rough_texture pink;
-    @include specific-rounded-corner(0, 0, 10px, 10px);
-    @include box-shadow(0, 1px, 3px, #888);
+    margin: 0;
+    padding: 22px 0 5px;
+    background: $rough_texture #ddd;
   }
 }
 
 #sidebars {
-  float: right;
   display: block;
-  position: relative;
-  top: 4em;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 300px;
-  margin-bottom: 5em;
-  margin-right: 0.1em;
+  height: 100%;
+  background: $rough_texture #ddd;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 
   .block-icon {
     height: 35px;
@@ -39,7 +39,7 @@
     background: $images;
   }
 
-  h2.block-title {
+  .block-title {
     position: absolute;
     display: block;
     top: 0;
@@ -51,7 +51,7 @@
     @include opaque(0.7);
   }
 
-  div.content {
+  .content {
     margin: 1em 1em 0.5em;
     padding: 0;
     background: #fefefe;
@@ -62,7 +62,7 @@
 #flufffiest-stories {
   background-color: #f7bbdc;
 
-  li.fluffy-node {
+  .fluffy-node {
     position: relative;
     padding: 1em 0.8em;
     margin: 0;
@@ -78,7 +78,7 @@
     }
   }
 
-  h2.block-title {
+  .block-title {
     text-shadow: 0 0 2px #be2d89;
     background-color: #ec9dcd;
   }
@@ -120,7 +120,7 @@
     border-bottom: 1px solid #ceeee7;
   }
 
-  h2.block-title {
+  .block-title {
     text-shadow: 0 0 2px #418d87;
     background-color: #60c2ba;
   }
@@ -153,7 +153,7 @@
     padding-left: 1em;
   }
 
-  p.tweet {
+  .tweet {
   padding: 1em 1em 0;
   font-size: 0.8em;
   color: #444;
@@ -175,7 +175,7 @@
     background: #f6fdef;
   }
 
-  h2.block-title {
+  .block-title {
     text-shadow: 0 0 2px #1e9427;
     background-color: #67bd7f;
   }
@@ -228,7 +228,7 @@
 }
 
 #fluffy-polls {
-  h2.block-title {
+  .block-title {
     background-color: #f584ac;
     text-shadow: 0 0 2px #a85867;
   }
@@ -260,7 +260,7 @@
     background-color: #ffe4f2;
   }
 
-  div.content {
+  .content {
     padding: 1em 0.8em;
   }
 }
@@ -268,7 +268,7 @@
 #fluffy-tag-cloud {
   background-color: #6ecfee;
 
-  h2.block-title {
+  .block-title {
     background-color: #55b0ce;
     text-shadow: 0 0 2px #108a9b;
   }
@@ -277,12 +277,12 @@
     background-position: -40px 2px;
   }
 
-  div.content {
+  .content {
     padding: 1em 0.5em 0.5em;
     background: #f9f9f9;
   }
 
-  a.tagclouds {
+  .tagclouds {
     padding: 0.2em 0.3em;
     line-height: 1.25;
 

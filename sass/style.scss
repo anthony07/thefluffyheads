@@ -74,19 +74,20 @@ h5, h6 {
 a {
 	text-decoration: none;
 	@include transition;
-	color: #0fc4bc;
+	color: #13bbb4;
 
 	&:hover {
-		color: #fc83b3;
+		color: #f76ca3;
 	}
 }
 
 strong {
-	color: rgb(18, 180, 187);
+	color: #479fa3;
 	font-size: 1.15em;
 }
 
 em, strong {
+	font-family: sans-serif;
 	font-weight: bold;
 }
 
@@ -190,7 +191,12 @@ i, q {
 
 .node-column {
 	float: left;
-	width: 50%;
+	width: 300px;
+	margin-right: 20px;
+
+	&.last {
+		margin-right: 0;
+	}
 }
 
 #admin-toolbar * {
@@ -271,10 +277,7 @@ i, q {
 }
 
 #navigation {
-	float: left;
-	width: 13%;
-	max-width: 10em;
-	min-width: 8em;
+	display: none;
 }
 
 #nav-spanner{
@@ -284,7 +287,7 @@ i, q {
 #main-menu {
 	position: fixed;
 	top: 5em;
-	width: 110px;
+	width: auto;
 	margin: 0 0 0 1em;
 	padding: 0 0 1em 0;
 
@@ -362,8 +365,7 @@ i, q {
 	position: relative;
 	float: left;
 	margin: 0;
-	width: 55%;
-	max-width: 720px;
+	width: auto;
 	padding: 4em 0 1em;
 
 	&.article-page {
@@ -464,14 +466,6 @@ i, q {
 			@include opaque(0);
 		}
 	}
-}
-
-#left-cards {
-	padding-right: 0.5em;
-}
-
-#right-cards {
-	padding-left: 0.5em;
 }
 
 @import 'taxonomy', 'node', 'highlighted', 'slimbox', 'sidebars', 'search';

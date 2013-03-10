@@ -5,7 +5,11 @@
 ?>
 
 <article id="teaser-<?php print $node -> nid;?>" class="<?php print $classes;?>"<?php print $attributes;?>>
-  <?php print render($content['field_image']);?>
+  <?php
+    print render($title_prefix);
+    print render($title_suffix);
+    print render($content['field_image']);
+  ?>
   <h2<?php print $title_attributes;?> class="node-title">
     <?php print $title;?>
   </h2>

@@ -61,7 +61,8 @@
         <?php if($page_type == 'front-page'): ?>
           <section id="cards" class="clearfix">
             <div id="left-cards" class="node-column"></div>
-            <div id="right-cards" class="node-column"></div>
+            <div id="middle-cards" class="node-column"></div>
+            <div id="right-cards" class="node-column last"></div>
           </section>
         <?php endif; ?>
 
