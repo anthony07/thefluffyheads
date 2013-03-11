@@ -1,20 +1,4 @@
-@import "mixins", "constants";
-
-@font-face {
-  font-family: 'Georgina';
-  src: url('fonts/CreteRound-Regular-webfont.eot');
-  src: url('fonts/CreteRound-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/CreteRound-Regular-webfont.woff') format('woff'), url('fonts/CreteRound-Regular-webfont.ttf') format('truetype'), url('fonts/CreteRound-Regular-webfont.svg#CreteRoundRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'RobotoRegular';
-  src: url('fonts/roboto/Roboto-Regular-webfont.eot');
-  src: url('fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto/Roboto-Regular-webfont.woff') format('woff'), url('fonts/roboto/Roboto-Regular-webfont.ttf') format('truetype'), url('fonts/roboto/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@import "fonts", "mixins", "constants";
 
 html * {
 	margin: 0;
@@ -38,9 +22,14 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-ol, ul {
+ul {
 	list-style: none;
 }
+
+ol {
+	list-style: decimal;
+}
+
 blockquote, q {
 	quotes: none;
 }
@@ -82,18 +71,20 @@ a {
 }
 
 strong {
-	color: #479fa3;
-	font-size: 1.15em;
+	color: #0c9fb3;
+	font-size: 1.1em;
 }
 
 em, strong {
-	font-family: sans-serif;
+	font-family: Helvetica, sans-serif;
 	font-weight: bold;
 }
 
 i, q {
+	color: #787878;
 	font-style: italic;
-	color: #888;
+	font-family: Georgia, serif;
+	font-size: 1.05em;
 }
 
 .clear {
@@ -210,7 +201,7 @@ i, q {
 	left: 0;
 	top: 0;
 	width: 100%;
-	font-family: 'RobotoRegular', Arial, sans-serif;
+	font-family: 'MuseoSans500', Arial, sans-serif;
 	@include box-shadow(0, 1px, 3px, #b5b5b5);
 
 	min-width: 850px;
@@ -258,7 +249,7 @@ i, q {
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	font-family: 'RobotoRegular', Arial, sans-serif;
+	font-family: 'MuseoSans500', Arial, sans-serif;
 	background: $background;
 	box-shadow: 0 0.2em 0.5em #7a7a7a;
 	z-index: 1;
