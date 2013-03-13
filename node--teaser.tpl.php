@@ -1,10 +1,10 @@
 <?php
-  $read_more = "<a href='{$node_url}' about='{$title}' class='view-card'>
-    read full article<span class='element-invisible'>about {$title}</span>
+  $read_more = "<a href='{$node_url}' title='View Story' class='view-card'>
+    Read more <span class='element-invisible' about='{$title}'>about {$title}</span>
     </a>";
 ?>
 
-<article id="teaser-<?php print $node -> nid;?>" class="<?php print $classes;?>"<?php print $attributes;?>>
+<article id="teaser-<?php print $node -> nid;?>" class="card <?php print $classes;?>"<?php print $attributes;?>>
   <?php
     print render($title_prefix);
     print render($title_suffix);

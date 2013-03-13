@@ -1,12 +1,12 @@
 jQuery(document).ready(function() {
   var $ = jQuery, doc = $(this), main = $('#main'), wind0w = $(window), shadow = $('#header-shadow'), footer = $("#footer"), menu = $("#main-menu"), gallery = $('.field-name-field-gallery');
 
+  //remove all width and height attributes of images
+  $('.purged').removeAttr('width').removeAttr('height');
   //Add a pure css arrow on active-link
   menu.find('.active').after('<span class="arrow"></span>');
-
   //Dynamic place a clear div in gallery field
   gallery.find('.field-item:last-child').after('<div class="clear"></div>');
-
   //Arrange node cards
   var left = $('#left-cards'), right = $('#right-cards'), middle = $('#middle-cards');
   var nodes = $('.node-teaser'), cardWrapper = $('.term-listing-heading'), cards = $('#cards'), nodeCounter = 1;

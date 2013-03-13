@@ -1,3 +1,16 @@
+.card {
+	margin: 1em 0;
+	padding: 0;
+	background-color: white;
+	box-shadow: 0 1px 2px #afafaf;
+	@include uniform-rounded-corner(2px);
+	overflow: hidden;
+
+	&.highlighted {
+		width: 620px;
+	}
+}
+
 .view-card {
 	display: block;
 	position: absolute;
@@ -17,6 +30,49 @@
 		border: none;
 		box-shadow: none;
 	}
+}
+
+.user-picture {
+	display: none;
+}
+
+.node-title {
+	margin-bottom: 0.25em;
+	padding: 0.5em 11px;
+	font-size: 18.5px;
+	line-height: 1.2em;
+	color: #333;
+
+	&.highlighted {
+		font-size: 22px;
+	}
+}
+
+.summary {
+	padding: 0 12px 1em;
+	font: normal 12px/1.85 Verdana, sans-serif;
+	color: #666;
+
+	&.highlighted {
+		margin-bottom: 1.5em;
+		font-size: 13px;
+		color: #444;
+	}
+}
+
+
+.submission {
+	position: relative;
+	display: block;
+	padding: 1em 12px;
+	font-size: 11px;
+	color: #999;
+	background: #f9f9f9;
+	border-top: 1px dashed #e4e4e4;
+}
+
+.date {
+	margin-left: 1em;
 }
 
 .field-name-field-gallery {
@@ -75,46 +131,6 @@
 .node-teaser {
 	position: relative;
 	width: 100%;
-	margin: 1em 0;
-	padding: 0;
-	background-color: white;
-	box-shadow: 0 1px 2px #bbb;
-
-	.node-title {
-		margin-bottom: 0.25em;
-		padding: 0.5em 11px;
-		font-size: 18.5px;
-		line-height: 1.2em;
-		color: #333;
-
-		a, a:visited {
-			color: #444;
-		}
-	}
-
-	.submission {
-		position: relative;
-		display: block;
-		padding: 1em 12px;
-		font-size: 11px;
-		color: #999;
-		background: #f9f9f9;
-		border-top: 1px dashed #e4e4e4;
-	}
-
-	.date {
-		margin-left: 1em;
-	}
-
-	.user-picture {
-		display: none;
-	}
-
-	.summary {
-		padding: 0 12px 1em;
-		font: normal 12px/1.85 Verdana, sans-serif;
-		color: #666;
-	}
 }
 
 #page-title {

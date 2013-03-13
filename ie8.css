@@ -1,0 +1,10 @@
+.clearfix {
+  margin-right: 1px;
+}
+
+.clearfix-after {
+  display: block;
+  font-size: 0;
+  clear: both;
+  height: 0;
+}

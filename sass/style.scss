@@ -88,23 +88,15 @@ i, q {
 }
 
 .clear {
+	display: block;
 	clear: both;
 }
 
 .clearfix {
 	display: inline-block;
+	min-height: 1%;
 }
 
-// start commented backslash hack \
-* html .clearfix {
-	height: 1%;
-}
-
-.clearfix {
-	display: block;
-}
-
-// close commented backslash hack
 .clearfix:after {
    display: block;
    font-size: 0;
@@ -259,8 +251,10 @@ i, q {
 
 #wrapper {
 	position: relative;
-	max-width: 1320px;
+	width: 100%;
+	max-width: 1360px;
 	margin: 0 auto;
+	padding: 1em;
 }
 
 #site-name-slogan {
@@ -357,7 +351,7 @@ i, q {
 	float: left;
 	margin: 0;
 	width: auto;
-	padding: 4em 0 1em;
+	padding: 2em 0 1em;
 
 	&.article-page {
 		background: #fefefe;
@@ -384,7 +378,7 @@ i, q {
 
 		img {
 			width: 100%;
-			max-width: 580px;
+			max-width: 620px;
 		}
 	}
 

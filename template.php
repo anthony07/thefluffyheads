@@ -29,6 +29,13 @@ function tfh_menu_local_tasks(&$variables) {
 }
 
 /**
+ * Make all images purgeable
+ */
+function tfh_preprocess_image_style(&$variables)  {
+  $variables['attributes']['class'][] = 'purged';
+}
+
+/**
  * Alters the image formatting
  */
 function tfh_image_formatter($variables) {
@@ -37,11 +44,6 @@ function tfh_image_formatter($variables) {
 
   if (isset($item['attributes'])) {
     $image['attributes'] = $item['attributes'];
-  }
-
-  if (isset($item['width']) && isset($item['height'])) {
-    unset($item['width']);
-    unset($item['height']);
   }
 
   // Do not output an empty 'title' attribute.
