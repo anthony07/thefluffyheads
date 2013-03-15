@@ -325,14 +325,5 @@
   .more-link {
     width: 50%;
     margin: 1em auto 0;
-
-    a {
-      @extend .read-more;
-      width: 100%;
-      margin: 0 auto;
-      display: block;
-      line-height: 1.4em;
-      font-size: 0.9em;
-    }
   }
 }

@@ -1,4 +1,5 @@
 @mixin opaque($value: 1) {
+  -ms-opacity: $value;
   opacity: $value;
 }
 
