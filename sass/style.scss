@@ -44,7 +44,7 @@ table {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Georgina', serif;
+	font-family: 'CreteRoundRegular', serif;
 }
 
 h1 {
@@ -315,7 +315,7 @@ i, q {
 				width: 100%;
 				margin: 0 auto;
 				background: $images -467px -55px;
-				font: 0.8em/1em "Georgina", serif;
+				font: 0.8em/1em "CreteRoundRegular", serif;
 				color: #bcc22a;
 				text-align: center;
 				line-height: 150px;
@@ -362,15 +362,6 @@ i, q {
 		font-size: 0.8em;
 		line-height: 2.2em;
 		width: 40em;
-	}
-
-	.user-picture {
-		float: left;
-
-		img {
-			width: 2.1em;
-			margin-right: 0.25em;
-		}
 	}
 
 	.field-name-field-image {
@@ -464,7 +455,7 @@ i, q {
 	width: 100%;
 
 	p {
-		font: normal 1em/1.5 'Georgina', serif;
+		font: normal 1em/1.5 'CreteRoundRegular', serif;
 		width: 100%;
 		max-width: 500px;
 		color: #333;

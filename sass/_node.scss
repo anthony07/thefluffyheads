@@ -33,7 +33,37 @@
 }
 
 .user-picture {
-	display: none;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 1em;
+	width: 30px;
+	height: 30px;
+
+	a {
+		position: absolute;
+		display: block;
+		height: 100%;
+		width: 100%;
+		background: $images;
+		@include opaque(0.6);
+
+		&[href="/user/5"] {
+			background-position: 0 -192px;
+		}
+
+		&[href="/user/4"] {
+			background-position: -29px -192px;
+		}
+
+		&[href="/user/48"] {
+			background-position: -62px -192px;
+		}
+	}
+
+	img {
+		display: none
+	}
 }
 
 .node-title {
@@ -64,7 +94,7 @@
 .submission {
 	position: relative;
 	display: block;
-	padding: 1em 12px;
+	padding: 1em 12px 1em 45px;
 	font-size: 11px;
 	color: #999;
 	background: #f9f9f9;
@@ -118,7 +148,7 @@
 		margin-right: 3em;
 		text-indent: 1.8em;
 		color: #666;
-		font: normal 1em/2.1em "Georgina", sans-serif;
+		font: normal 1em/2.1em "CreteRoundRegular", sans-serif;
 		background: $images -35px -85px;
 	}
 
@@ -150,6 +180,15 @@
 		font-size: 0.95em;
 		list-style: disc;
 		color: #444;
+	}
+
+	.user-picture {
+		float: left;
+
+		img {
+			width: 2.1em;
+			margin-right: 0.25em;
+		}
 	}
 
 	.field-name-field-image {

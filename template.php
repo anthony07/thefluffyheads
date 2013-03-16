@@ -84,6 +84,7 @@ function tfh_image_formatter($variables) {
   return $output;
 }
 
+
 /**
  * Override or insert variables into the node template.
  */
@@ -92,6 +93,7 @@ function tfh_preprocess_node(&$variables) {
   $node = $variables['node'];
   $view_mode = $variables['view_mode'];
 
+  //view mode
   switch ($view_mode) {
     case 'full':
       if(node_is_page($node)) {

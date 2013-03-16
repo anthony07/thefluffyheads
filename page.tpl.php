@@ -13,8 +13,8 @@
 <div id="header-shadow" class="empty block"></div>
 <!-- /#header -->
 
-<div id="container" class="clearfix">
-  <div id="wrapper" class="clearfix">
+<div id="container">
+  <div id="wrapper">
     <div id="skip-link">
       <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
       <?php if ($main_menu): ?>
