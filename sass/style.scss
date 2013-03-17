@@ -200,7 +200,8 @@ i, q {
 
 	.wrapper {
 		margin: 0 auto;
-		max-width: 1320px;
+		padding: 0 1em;
+		max-width: 1360px;
 	}
 }
 
@@ -262,85 +263,50 @@ i, q {
 }
 
 #navigation {
-	display: none;
-}
+	margin: 0 0 0 3em;
 
-#nav-spanner{
-	opacity: 0;
-}
+	.leaf {
+		float: left;
+		display: block;
+		height: 60px;
+		margin: 2px 0 0;
+		padding: 0;
+		font-size: 16px;
+		line-height: 60px;
+		background: $images;
 
-#main-menu {
-	position: fixed;
-	top: 5em;
-	width: auto;
-	margin: 0 0 0 1em;
-	padding: 0 0 1em 0;
-
-	.block-title {
-		display: none;
-		visibility: hidden;
-	}
-
-	.menu {
-		margin: 1em 0 0;
-
-		.leaf {
+		a {
 			position: relative;
 			display: block;
-			margin: 0;
-			padding: 0;
-			height: 6em;
-			list-style: none;
-			background: $rough_texture #fefefe;
-			border: 1px solid #ccc;
-			border-top: 1px solid #fefefe;
-			@include opaque(0.7);
-			@extend .grayscale;
+			width: 100%;
+			height: 100%;
+			padding: 0 1em 0 3.7em;
+			font-family: 'CreteRoundRegular', serif;
+			text-shadow: 0 1px 0 white;
+		}
 
-			&:hover, &.active-trail {
-				@include opaque(1);
-			}
-
-			&.active-trail {
-				@extend .no-filter;
-				background: #fefefe;
-				box-shadow: 0 1px 3px rgba(66, 66, 66, 0.08);
-				z-index: 10;
-			}
+		&.nerdy-nathan {
+			background-position: -116px -115px;
 
 			a {
-				position: absolute;
-				display: block;
-				height: 100%;
-				width: 100%;
-				margin: 0 auto;
-				background: $images -467px -55px;
-				font: 0.8em/1em "CreteRoundRegular", serif;
-				color: #bcc22a;
-				text-align: center;
-				line-height: 150px;
-				white-space: nowrap;
+				color: #7fd33d;
 			}
 		}
 
-		.leaf.techie-tony {
+		&.techie-tony {
+			background-position: -120px -173px;
+
 			a {
-				background-position: -265px -54px;
-				color: #8bbbd1;
+				padding-left: 3.2em;
+				color: #21cece;
 			}
 		}
 
-		.leaf.nerdy-nathan {
-			a {
-				background-position: -368px -54px;
-				color: #92d192;
-			}
-		}
+		&.random-rae {
+			background-position: -115px -57px;
 
-		.leaf.random-rae {
 			a {
-				background-position: -160px -58px;
-				color: #e6a0be;
+				color: #f76ca3;
 			}
 		}
 	}

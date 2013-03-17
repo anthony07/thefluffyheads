@@ -8,19 +8,6 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-  </div>
-</header>
-<div id="header-shadow" class="empty block"></div>
-<!-- /#header -->
-
-<div id="container">
-  <div id="wrapper">
-    <div id="skip-link">
-      <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-      <?php if ($main_menu): ?>
-        <a href="#navigation" class="element-invisible element-focusable"><?php print t('Skip to navigation'); ?></a>
-      <?php endif; ?>
-    </div>
 
     <?php if ($main_menu || !empty($page['navigation'])): ?>
     <nav id="navigation" role="navigation" class="clearfix">
@@ -41,10 +28,23 @@
             ),
           )); ?>
           <?php endif; ?>
-      <div id="nav-spanner">End of navigation</div>
     </nav>
     <?php endif; ?>
     <!-- /#navigation -->
+  </div>
+</header>
+<div id="header-shadow" class="empty block"></div>
+<!-- /#header -->
+
+<div id="container">
+  <div id="wrapper">
+    <div id="skip-link">
+      <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+      <?php if ($main_menu): ?>
+        <a href="#navigation" class="element-invisible element-focusable"><?php print t('Skip to navigation'); ?></a>
+      <?php endif; ?>
+    </div>
+
     <?php
       $page_type = ($is_front || arg(0) == 'taxonomy') ? 'front-page' : 'article-page';
       $section = (arg(0) == 'taxonomy') ? 'fluffy-head-page' : 'page';

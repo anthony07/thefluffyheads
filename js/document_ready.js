@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
   //remove all width and height attributes of images
   $('.purged').removeAttr('width').removeAttr('height');
   //Add a pure css arrow on active-link
-  menu.find('.active').after('<span class="arrow"></span>');
+  menu.find('.active').after('<span class="arrow down"></span>');
   //Dynamic place a clear div in gallery field
   gallery.find('.field-item:last-child').after('<div class="clear"></div>');
   //Arrange node cards
