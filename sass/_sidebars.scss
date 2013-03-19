@@ -28,7 +28,7 @@
   height: auto;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
-  font-family: 'MuseoSans500', Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
 
   .block-icon {
     height: 35px;
@@ -96,7 +96,7 @@
   }
 
   .block-icon {
-    background-position: -42px -42px;
+    background-position: -38px -42px;
   }
 
   .author {
@@ -163,68 +163,6 @@
   }
 }
 
-#recent-comments {
-  background-color: #abdba7;
-
-  li {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    background: #f6fdef;
-  }
-
-  .block-title {
-    text-shadow: 0 0 2px #1e9427;
-    background-color: #67bd7f;
-  }
-
-  .block-icon {
-    background-position: 0 -40px;
-  }
-
-  .dsq-widget-avatar {
-    margin: 0.2em 0.5em 0.1em 0.8em;
-    padding: 0;
-    @include uniform-rounded-corner(5px);
-  }
-
-  .dsq-widget-user {
-    display: block;
-    margin-bottom: 0.5em;
-    line-height: 2.8;
-    font-size: 0.9em;
-    font-weight: normal;
-    color: #496344;
-    background: #eef8e4;
-  }
-
-  .dsq-widget-comment {
-    display: block;
-    padding: 0 0.8em;
-
-    p {
-      font-size: 0.8em;
-      line-height: 1.6;
-      color: #4a6653;
-    }
-  }
-
-  .dsq-widget-meta {
-    display: block;
-    padding: 1em;
-    font-size: 0.8em;
-
-    a {
-      color: #74b174;
-
-      &~a {
-        font-size: 0.85em;
-        color: #97d197;
-      }
-    }
-  }
-}
-
 #fluffy-polls {
   .block-title {
     background-color: #f584ac;
@@ -264,15 +202,15 @@
 }
 
 #fluffy-tag-cloud {
-  background-color: #6ecfee;
+  background-color: #b7ced6;
 
   .block-title {
-    background-color: #55b0ce;
-    text-shadow: 0 0 2px #108a9b;
+    background-color: #a1bcc5;
+    text-shadow: 0 0 2px #4d676b;
   }
 
   .block-icon {
-    background-position: -40px 2px;
+    background-position: -37px 2px;
   }
 
   .content {
@@ -283,41 +221,36 @@
   .tagclouds {
     padding: 0.2em 0.3em;
     line-height: 1.25;
+    color: #608991;
 
     &:hover {
       color: white !important;
-      background: #aaa;
+      background: #b7ced6;
       @include uniform-rounded-corner(3px);
     }
 
     &.level1, &.level1:visited {
       font-size: 0.9em;
-      color: #15e7f0;
     }
 
     &.level2, &.level2:visited{
       font-size: 0.95em;
-      color: #2798b4;
     }
 
     &.level3, &.level3:visited {
       font-size: 1em;
-      color: #03b7e4;
     }
 
     &.level4, &.level4:visited {
       font-size: 1.1em;
-      color: #0892ff;
     }
 
     &.level5, &.level5:visited {
       font-size: 1.2em;
-      color: #006ec5;
     }
 
     &.level6, &.level6:visited {
       font-size: 1.3em;
-      color: #004f8d;
     }
   }
 
@@ -327,7 +260,7 @@
   }
 }
 
-#find-us-in-facebook {
+#like-us-in-facebook {
   background-color: #47aff5;
 
   .block-title {
